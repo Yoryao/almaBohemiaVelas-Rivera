@@ -1,13 +1,13 @@
 import logo from './candletitle.svg';
 import './App.css';
 import NavBar from './components/NavBar';
+import Footer from './components/Footer';
 
 
 function App() {
   return (
     <div className="App">
-      <NavBar></NavBar>
-
+      <NavBar/>
       <main className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p id="mainTitle">
@@ -22,7 +22,7 @@ function App() {
         </a>
       </main>
 
-
+<Footer/>
     </div>
   );
 }

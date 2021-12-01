@@ -1,7 +1,7 @@
 import "./NavBar.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-function NavBar() {
+const NavBar = () =>  {
   return (
     <nav
       className="navbar navbar-light navbar-expand-lg navbar-light bg-light"
@@ -21,6 +21,9 @@ function NavBar() {
         <a className="nav-link" href="./index.html">
           Jabones
         </a>
+        <button>
+        <span class="material-icons">shopping_cart</span>
+        </button>
       </div>
     </nav>
   );

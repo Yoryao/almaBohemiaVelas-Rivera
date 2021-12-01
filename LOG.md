@@ -12,4 +12,9 @@ Agregado de Font from google fonts, atravez de <link> en index.html
 
 Creación de NavBar y 3 Anchor en la misma con bootstrap 5.
 Instalado por CLI y referenciado en el archivo .js (bootstrap minificado).
+Agregado de icono con google fonts a travez de <link> en index.html
+Agregado de simple footer para verificar multiples componentes.
 
+### Cuarta Clase. 02/12/2021
+
+gir
