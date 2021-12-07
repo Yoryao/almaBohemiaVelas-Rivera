@@ -1,7 +1,8 @@
 import "./NavBar.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import CartWidget from "./CartWidget";
 
-const NavBar = () =>  {
+function NavBar()  {
   return (
     <nav
       className="navbar navbar-light navbar-expand-lg navbar-light bg-light"
@@ -21,9 +22,7 @@ const NavBar = () =>  {
         <a className="nav-link" href="./index.html">
           Jabones
         </a>
-        <button>
-        <span class="material-icons">shopping_cart</span>
-        </button>
+    <CartWidget />
       </div>
     </nav>
   );

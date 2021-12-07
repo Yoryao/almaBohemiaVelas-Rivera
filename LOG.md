@@ -17,4 +17,9 @@ Agregado de simple footer para verificar multiples componentes.
 
 ### Cuarta Clase. 02/12/2021
 
-gir
+Se agrega el componente CartWidget al NavBar, para contabilizar los productos en el carrito. 
+Se agrega de modo prueba el componente ItemListContainer en App, el cual pasa por props un grupo "usuarios" y un array, accesos, con los tipos de Usuarios defenidos. 
+La funcion ItemListContainer, recibe los dos props, con el grupo, lo renderiza en pantalla dentro de un h1. 
+Con el array, lo mapea y hace un listado de links de ingreso. 
+
+### Quinta Clase  07/12/21 
