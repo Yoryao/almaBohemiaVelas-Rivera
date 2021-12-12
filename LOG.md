@@ -23,3 +23,5 @@ La funcion ItemListContainer, recibe los dos props, con el grupo, lo renderiza e
 Con el array, lo mapea y hace un listado de links de ingreso. 
 
 ### Quinta Clase  07/12/21 
+
+Se agrego el componente Item Count para realizar la suma o resta de la cantidad de unidades de un elemento; tambien el boton restabler a 0 la cantidad. Se creo un componente y dentro del mismo se crearon los botones y de declaro el hook para manejar el estado del componente.

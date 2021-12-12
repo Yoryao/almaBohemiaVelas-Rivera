@@ -3,13 +3,16 @@ import "./App.css";
 import NavBar from "./components/header/NavBar";
 import Footer from "./components/footer/Footer";
 import ItemListContainer from "./components/main/ItemListContainer";
+import ItemCount from "./components/section/ItemCount";
 
 function App() {
   const accesos = [
-    { href: "#", name: "Clientes" },
-    { href: "#", name: "Distribuidores" },
-    { href: "#", name: "Mayoristas" },
-    { href: "#", name: "Proveedores" },
+    { href: "#", name: "Velas" },
+    { href: "#", name: "Fragancias" },
+    { href: "#", name: "Escencias" },
+    { href: "#", name: "Velones" },
+    { href: "#", name: "Jabones" },
+
   ];
 
   return (
@@ -19,6 +22,8 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p id="mainTitle">Alma Bohemia Velas</p>
         <ItemListContainer action={"Usuarios"} links={accesos}/>
+        <ItemCount />
+
       </main>
 
       <Footer />
