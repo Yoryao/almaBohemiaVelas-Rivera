@@ -15,6 +15,11 @@ function App() {
 
   ];
 
+  function onAdd() {
+    //este console log cambiarlo por un toastfy
+console.log(`Se agrego al carrito las unidades.`)
+  }
+
   return (
     <div className="App">
       <NavBar />
@@ -22,7 +27,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p id="mainTitle">Alma Bohemia Velas</p>
         <ItemListContainer action={"Usuarios"} links={accesos}/>
-        <ItemCount />
+        <ItemCount stock={12} initial={5} onAdd={onAdd}/>
 
       </main>
 
