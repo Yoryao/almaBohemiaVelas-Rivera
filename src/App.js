@@ -23,13 +23,12 @@ console.log(`Se agrego al carrito las unidades.`)
   return (
     <div className="App">
       <NavBar />
-      <main className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p id="mainTitle">Alma Bohemia Velas</p>
-        <ItemListContainer action={"Usuarios"} links={accesos}/>
-        <ItemCount stock={12} initial={5} onAdd={onAdd}/>
-
-      </main>
+        <main className="App-header">
+            <img src={logo} className="App-logo" alt="logo" />
+            <p id="mainTitle">Alma Bohemia Velas</p>
+            <ItemListContainer />
+            {/* <ItemCount stock={12} initial={5} onAdd={onAdd}/> */}
+        </main>
 
       <Footer />
     </div>
