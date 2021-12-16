@@ -4,6 +4,7 @@ import NavBar from "./components/header/NavBar";
 import Footer from "./components/footer/Footer";
 import ItemListContainer from "./components/main/ItemListContainer";
 import ItemCount from "./components/section/ItemCount";
+import items from "./items.json";
 
 function App() {
   const accesos = [
@@ -26,7 +27,7 @@ console.log(`Se agrego al carrito las unidades.`)
         <main className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
             <p id="mainTitle">Alma Bohemia Velas</p>
-            <ItemListContainer />
+            <ItemListContainer items={items} />
             {/* <ItemCount stock={12} initial={5} onAdd={onAdd}/> */}
         </main>
 

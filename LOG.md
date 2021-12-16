@@ -28,3 +28,6 @@ Se agrego el componente Item Count para realizar la suma o resta de la cantidad 
 Se agrego una funcion por props desde app a ItemCount, que actua con el evento onAdd. y el Prop initial que setea el valor inicial de la cantidad de unidades. 
 
 ### Sexta Clase  09/12/21 
+
+Se corrigio los componentes List e ItemList para que muestren un Json de productos. 
+Se comenzo el uso de State and hooks

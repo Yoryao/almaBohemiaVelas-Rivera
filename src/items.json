@@ -1,0 +1,5 @@
+[
+    { "id": 1, "nombre": "Mini Bochin", "description": "Lavanda", "price": 100 },
+    { "id": 2, "nombre": "Bochin", "description": "Magnolia", "price": 150 },
+    { "id": 3, "nombre": "Velon", "description": "Sandalo", "price": 200 }
+  ]

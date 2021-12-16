@@ -6,9 +6,10 @@ import React from "react";
 
 export const Item = (props) => {
   return (
-    <div>
-      <h2>{`Nombre: ${props.title}`}</h2>
-      <h4>{`Price: ${props.price}`}</h4>
+    <div className="">
+      <h2>Nombre: {props.nombre}</h2>
+      <h4>Precio: $ {props.price}</h4>
+      <h2>Nombre: {props.descripcion}</h2>
     </div>
   );
 };

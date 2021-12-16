@@ -12,7 +12,8 @@ export const ItemList = (props) => {
         return (
           <Item
             key={producto.id}
-            nombre={producto.title}
+            nombre={producto.nombre}
+            descripcion={producto.description}
             price={producto.price}
           />
         );
