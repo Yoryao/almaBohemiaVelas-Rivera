@@ -3,8 +3,10 @@ import "./App.css";
 import NavBar from "./components/header/NavBar";
 import Footer from "./components/footer/Footer";
 import ItemListContainer from "./components/main/ItemListContainer";
-import ItemCount from "./components/section/ItemCount";
 import items from "./items.json";
+import itemInicial from './itemInicial.json'
+
+import ItemDetailContainer from "./components/main/ItemDetailContainer";
 
 function App() {
   const accesos = [
@@ -16,10 +18,10 @@ function App() {
 
   ];
 
-  function onAdd() {
-    //este console log cambiarlo por un toastfy
-console.log(`Se agrego al carrito las unidades.`)
-  }
+//   function onAdd(cantidad) {
+//     //este console log cambiarlo por un toastfy
+// console.log(`Se agrego al carrito ${cantidad} unidades.`)
+//   }
 
   return (
     <div className="App">
@@ -28,7 +30,7 @@ console.log(`Se agrego al carrito las unidades.`)
             <img src={logo} className="App-logo" alt="logo" />
             <p id="mainTitle">Alma Bohemia Velas</p>
             <ItemListContainer items={items} />
-            {/* <ItemCount stock={12} initial={5} onAdd={onAdd}/> */}
+            <ItemDetailContainer items={itemInicial}/>
         </main>
 
       <Footer />

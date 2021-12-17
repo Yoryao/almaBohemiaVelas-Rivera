@@ -19,17 +19,22 @@ function ItemCount({stock , initial, onAdd}) {
     }
   }
 
+  function agregarItem() {
+    console.log("agregando desde Item Count")
+    //onAdd(contador);
+  }
+
   function restablecer() {
     setContador(0);
   }
 
   return (
     <div>
-      <p>Cantidad de STOCK: {contador}</p>
+      <p>Cantidad de productos: {contador}</p>
       <button onClick={sumar}>Sumar</button>
       <button onClick={restar}>Restar</button>
       <button onClick={restablecer}>Restablecer</button>
-      <button onClick={onAdd}>Agregar</button>
+      <button onClick={agregarItem}>Agregar</button>
     </div>
   );
 }

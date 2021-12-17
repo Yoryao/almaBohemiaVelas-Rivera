@@ -29,9 +29,8 @@ export const ItemListContainer = ({items}) => {
   return (
     <div>
       <h1>Bienvenidos </h1>
-      <nav>
+      
         <ItemList productos={productos} />
-      </nav>
     </div>
   );
 };
