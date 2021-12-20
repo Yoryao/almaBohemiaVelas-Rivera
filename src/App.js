@@ -5,23 +5,23 @@ import Footer from "./components/footer/Footer";
 import ItemListContainer from "./components/main/ItemListContainer";
 import items from "./items.json";
 import itemInicial from './itemInicial.json'
-
 import ItemDetailContainer from "./components/main/ItemDetailContainer";
 
 function App() {
-  const accesos = [
-    { href: "#", name: "Velas" },
-    { href: "#", name: "Fragancias" },
-    { href: "#", name: "Escencias" },
-    { href: "#", name: "Velones" },
-    { href: "#", name: "Jabones" },
+  // const accesos = [
+  //   { href: "#", name: "Velas" },
+  //   { href: "#", name: "Fragancias" },
+  //   { href: "#", name: "Escencias" },
+  //   { href: "#", name: "Velones" },
+  //   { href: "#", name: "Jabones" },
 
-  ];
+  // ];
 
 //   function onAdd(cantidad) {
 //     //este console log cambiarlo por un toastfy
 // console.log(`Se agrego al carrito ${cantidad} unidades.`)
 //   }
+console.log(itemInicial)
 
   return (
     <div className="App">

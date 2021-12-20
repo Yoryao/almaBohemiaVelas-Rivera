@@ -28,6 +28,10 @@ function ItemCount({stock , initial, onAdd}) {
     setContador(0);
   }
 
+  function getItem() {
+
+  }
+
   return (
     <div>
       <p>Cantidad de productos: {contador}</p>
@@ -35,6 +39,7 @@ function ItemCount({stock , initial, onAdd}) {
       <button onClick={restar}>Restar</button>
       <button onClick={restablecer}>Restablecer</button>
       <button onClick={agregarItem}>Agregar</button>
+      <button onClick={getItem}>Detalle</button>
     </div>
   );
 }
