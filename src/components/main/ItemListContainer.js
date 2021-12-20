@@ -14,11 +14,11 @@ export const ItemListContainer = ({ items }) => {
 
     promesa
       .then((products) => {
-        console.log("Funca");
+        //console.log("Funca");
         setProductos(products);
       })
       .catch(() => {
-        console.log("no funca");
+       // console.log("no funca");
       });
   });
 

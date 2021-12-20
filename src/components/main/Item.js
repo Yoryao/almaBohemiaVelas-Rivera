@@ -12,9 +12,9 @@ export const Item = (props) => {
       <h2>Nombre: {props.nombre}</h2>
       <h4>Precio: $ {props.price}</h4>
       <h2>Nombre: {props.descripcion}</h2>
-      <ItemCount stock={12} initial={5}
+      {/* <ItemCount stock={12} initial={5}
             // onAdd={onAdd} 
-            />
+            /> */}
     </div>
   );
 };

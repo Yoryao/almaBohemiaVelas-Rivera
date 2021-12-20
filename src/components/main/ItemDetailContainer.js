@@ -1,20 +1,21 @@
 import React, { useState, useEffect } from "react";
-import Item from "./Item";
 import ItemDetail from "./ItemDetail";
 
-export const ItemDetailContainer = (props) => {
-  console.log(props);
+const inicial = { id: 1, nombre: "difusor", description: "Coco", price: 190 }
+
+
+
+export const ItemDetailContainer = () => {
+
 
   const [detail, setDetail] = useState({});
 
-  console.log(detail);
-
-  const getItem = () => {
+  useEffect(() => {
     const promesa = new Promise((res, rej) => {
       setTimeout(() => {
-        res(props);
+        res(inicial);
       }, 2000);
-    });
+    }, []);
 
     promesa
       .then((item) => {
@@ -24,15 +25,12 @@ export const ItemDetailContainer = (props) => {
       .catch(() => {
         console.log("no funca el Detalle");
       });
-  };
-
-  useEffect(() => getItem(), []);
-  console.log({detail});
-
+  });
+ 
   return (
     <div>
       <h1> ACA VA UN ITEM DETAIL </h1>
-      <ItemDetail detail={detail} > ITEMDETAIL </ItemDetail>
+      <ItemDetail detail={detail}> ITEMDETAIL </ItemDetail>
     </div>
   );
 };
