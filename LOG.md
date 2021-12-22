@@ -36,3 +36,10 @@ Se comenzo el uso de State and hooks
 
 Se realiza lo mismo que la clase anterior, con ItemDetail e ItemDetail container.
 
+### REVISION INTEGRAL PARA LA PREENTREGA.
+
+Navbar funcionando con brand, secciones y CartWidget.
+Ajuste de imagenes de productos en items.json
+Ajuste de imagenss, botones y detalles en ItemDetail
+Ajuste de ItemCount
+Footer Simple Funcionando

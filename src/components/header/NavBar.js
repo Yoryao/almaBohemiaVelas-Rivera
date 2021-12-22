@@ -2,27 +2,24 @@ import "./NavBar.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import CartWidget from "./CartWidget";
 
-function NavBar()  {
+function NavBar() {
   return (
-    <nav
-      className="navbar navbar-light navbar-expand-lg navbar-light bg-light"
-      id="navbarId"
-    >
+    <nav className="navbar navbar-light navbar-expand-lg navbar-light bg-light" id="navbarId">
       <a className="navbar-brand" href="./index.html">
-        Alma Bohemia
+      Alma Bohemia
       </a>
 
       <div className="collapse navbar-collapse" id="navbarNav">
         <a className="nav-link" href="./index.html">
-          Velas
+        Nosotros
         </a>
         <a className="nav-link" href="./index.html">
-          Esencias
+        Productos
         </a>
         <a className="nav-link" href="./index.html">
-          Jabones
+        Contacto
         </a>
-    <CartWidget />
+        <CartWidget />
       </div>
     </nav>
   );

@@ -1,5 +1,8 @@
 [
-    { "id": 1, "nombre": "Mini Bochin", "description": "Lavanda", "price": 100 },
-    { "id": 2, "nombre": "Bochin", "description": "Magnolia", "price": 150 },
-    { "id": 3, "nombre": "Velon", "description": "Sandalo", "price": 200 }
+    { "id": 1, "nombre": "Difusor", "descripcion": "Para aromatizar ambientes", "precio": 100 , "img":"./difusor.jpg"},
+    { "id": 2, "nombre": "Bochin", "descripcion": "Pequeña vela de sitio", "precio": 150, "img":"./bochin.jpg" },
+    { "id": 3, "nombre": "Velon", "descripcion": "Velon de Sition", "precio": 200, "img":"./velon.jpg" },
+    { "id": 4, "nombre": "Esencia", "descripcion": "Para utilizar con hornitos", "precio": 200, "img":"./esencia.jpg" },
+    { "id": 5, "nombre": "Recarga", "descripcion": "Recarga de tus recipientes", "precio": 200, "img":"./recarga.jpg" }
+
   ]

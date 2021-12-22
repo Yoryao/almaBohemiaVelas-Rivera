@@ -2,7 +2,7 @@ import "./ItemListContainer.css";
 import React, { useState, useEffect } from "react";
 import ItemList from "./ItemList";
 
-export const ItemListContainer = ({ items }) => {
+export const ItemListContainer = ({ items , saludo }) => {
   const [productos, setProductos] = useState([]);
 
   useEffect(() => {
@@ -14,17 +14,14 @@ export const ItemListContainer = ({ items }) => {
 
     promesa
       .then((products) => {
-        //console.log("Funca");
         setProductos(products);
       })
-      .catch(() => {
-       // console.log("no funca");
-      });
+      .catch(() => {});
   });
 
   return (
     <div>
-      <h1>Bienvenidos </h1>
+      <h1>{saludo}</h1>
       <ItemList productos={productos} />
     </div>
   );
