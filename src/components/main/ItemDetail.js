@@ -5,8 +5,7 @@ export const ItemDetail = (props) => {
   console.log("Props dentro de ItemDetail");
   console.log(props);
 
-  // console.log("detail dentro de ItemDetail")
-  // console.log(detail)
+ 
 
   return (
     <div>
