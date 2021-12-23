@@ -1,16 +1,49 @@
-// Los ítems deben provenir de un llamado a una promise que los resuelva en tiempo diferido (setTimeout) de 2 segundos, para emular retrasos de red
-
-// Item.js: Es un componente destinado a mostrar información breve del producto que el user clickeará luego para acceder a los detalles (los desarrollaremos más adelante)
-
 import React from "react";
+import ItemCount from "../section/ItemCount";
+import "./item.css"
 
 export const Item = (props) => {
+
+function verDetalle() {
+
+}
+
+
   return (
-    <div className="">
-      <h2>Nombre: {props.nombre}</h2>
-      <h4>Precio: $ {props.price}</h4>
-      <h2>Nombre: {props.descripcion}</h2>
-    </div>
+    // <div className="">
+    //   {/* <img src={(props.img)} className="App-logo" alt={props.nombre} /> */}
+    //   <h2>Nombre: {props.nombre}</h2>
+    //   <h4>Precio: $ {props.precio}</h4>
+    //   <h2>Descripción: {props.descripcion}</h2>
+    //   <button onClick={verDetalle}>Ver Detalle</button>
+    // </div>
+    
+<div class="card">
+  <img variant="top" src={(props.img)} />
+  <div >
+    <h2>Nombre: {props.nombre}</h2>
+    <h4>Descripción: {props.descripcion}</h4>
+    <h4>Precio: $ {props.precio}</h4>
+    
+    <button variant="primary">Ver Detalle</button>
+     {/* <ItemCount stock={12} initial={5}
+           // onAdd={onAdd} 
+          /> */}
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
   );
 };
 

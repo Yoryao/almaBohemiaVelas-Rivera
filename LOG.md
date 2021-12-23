@@ -31,3 +31,15 @@ Se agrego una funcion por props desde app a ItemCount, que actua con el evento o
 
 Se corrigio los componentes List e ItemList para que muestren un Json de productos. 
 Se comenzo el uso de State and hooks
+
+### Septima Clase 14/12/21
+
+Se realiza lo mismo que la clase anterior, con ItemDetail e ItemDetail container.
+
+### REVISION INTEGRAL PARA LA PREENTREGA.
+
+Navbar funcionando con brand, secciones y CartWidget.
+Ajuste de imagenes de productos en items.json
+Ajuste de imagenss, botones y detalles en ItemDetail
+Ajuste de ItemCount
+Footer Simple Funcionando
