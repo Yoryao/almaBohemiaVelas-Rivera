@@ -20,7 +20,7 @@ import Contact from "./components/main/Contact";
 function App() {
   return (
     <BrowserRouter>
-      <NavBar marca={"aca va la marca"} links={links} />
+      <NavBar marca={"Alma Bohemia Velas"} links={links} />
 <Routes>
     <Route path="/" element={<Home />}/>
     <Route path="/nosotros" element={<Nosotros/>}/>

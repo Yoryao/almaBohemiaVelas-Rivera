@@ -1,17 +1,20 @@
-#navbarId{
-    background-color: darkorange;
-}
-#navbarNav{
-    background-color: darkorange;
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: darksalmon;
 }
 
+navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
-.navbar-nav {
-    justify-content: center;
-    align-items: center;
-  }
-  
-  
-  
-  
-  
+}
+
+nav {
+    padding: 5px;
+    color: darkturquoise;
+    text-decoration: deeppink;
+}
+

@@ -1,6 +1,10 @@
+import "./footer.css"
+
+
+
 const Footer = () => {
   return (
-    <footer id="dk-footer" className="dk-footer">
+    <footer>
       <div className="copyright">
         <span>Copyright © 2021. Yoryao Design and develop</span>
       </div>
