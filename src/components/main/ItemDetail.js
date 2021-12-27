@@ -1,10 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import ItemCount from "../section/ItemCount";
 
 export const ItemDetail = (props) => {
-  console.log("Props dentro de ItemDetail");
-  console.log(props);
-
  
 
   return (

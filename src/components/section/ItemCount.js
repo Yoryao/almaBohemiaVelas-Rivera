@@ -19,11 +19,11 @@ function ItemCount({ stock, initial, onAdd }) {
     //onAdd(contador);
   }
 
-  function restablecer() {
-    setContador(0);
-  }
+  // function restablecer() {
+  //   setContador(0);
+  // }
 
-  function getItem() {}
+  // function getItem() {}
 
   return (
     <div>

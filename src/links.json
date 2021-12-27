@@ -1,8 +1,7 @@
 [
     { "id": "1", "nombre": "Nosotros", "href": "/nosotros" },
     { "id": "2", "nombre": "Productos", "href": "/productos" },
-    { "id": "3", "nombre": "Contacto", "href": "/contacto" },
-    { "id": "4", "nombre": "Cat 1", "href": "/categoria/1" },
-    { "id": "5", "nombre": "Cat 2", "href": "/categoria/2" },
-    { "id": "6", "nombre": "Cart", "href": "/cart" }
+    { "id": "3", "nombre": "Detalle", "href": "/item/id" },
+    { "id": "4", "nombre": "x categoria", "href": "/categoria/:id" },
+    { "id": "5", "nombre": "Contacto", "href": "/contacto" }
 ]
