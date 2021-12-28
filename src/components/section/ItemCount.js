@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 function ItemCount({ stock, initial, onAdd }) {
+  //console.log(initial)
   const [contador, setContador] = useState(initial);
 
   function sumar() {
@@ -13,17 +15,12 @@ function ItemCount({ stock, initial, onAdd }) {
       setContador(contador - 1);
     }
   }
-
+  
   function agregarItem() {
-    console.log("agregando desde Item Count");
-    //onAdd(contador);
+    console.log("agregando desde Item Count con onAdd");
+    onAdd(contador);
+
   }
-
-  // function restablecer() {
-  //   setContador(0);
-  // }
-
-  // function getItem() {}
 
   return (
     <div>
@@ -32,7 +29,7 @@ function ItemCount({ stock, initial, onAdd }) {
       <button onClick={restar}>Restar</button>
       {/* <button onClick={restablecer}>Restablecer</button> */}
       <button onClick={agregarItem}>Agregar</button>
-      {/* <button onClick={getItem}>Detalle</button> */}
+      
     </div>
   );
 }

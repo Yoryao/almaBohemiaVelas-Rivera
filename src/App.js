@@ -1,20 +1,13 @@
-//import logo from "./candletitle.svg";
-//import "./App.css";
 import NavBar from "./components/header/NavBar";
 import Footer from "./components/footer/Footer";
 import ItemListContainer from "./components/main/ItemListContainer";
 import ItemDetailContainer from "./components/main/ItemDetailContainer";
 import items from "./items.json";
-import itemsInicial from "./itemInicial.json";
 import links from "./links.json";
 import { BrowserRouter , Route, Routes } from "react-router-dom";
-//import Home from "./components/main/Home";
 import Cart from "./components/main/Cart";
 import Nosotros from "./components/main/Nosotros";
 import Contact from "./components/main/Contact";
-
-
-
 
 
 function App() {

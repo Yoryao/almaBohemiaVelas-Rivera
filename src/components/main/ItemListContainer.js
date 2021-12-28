@@ -1,4 +1,3 @@
-//import "./ItemListContainer.css";
 import React, { useState, useEffect } from "react";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom"
@@ -20,7 +19,9 @@ export const ItemListContainer = ({ items , saludo }) => {
       .then((products) => {
         setProductos(products);
       })
-      .catch(() => {});
+      .catch(() => {
+        console.log("Error en el catch de ItemListContainer")
+      });
   });
 
   return (
