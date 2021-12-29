@@ -1,28 +1,35 @@
 import React, { useState, useEffect } from "react";
 import ItemList from "./ItemList";
-import { useParams } from "react-router-dom"
+import { useParams } from "react-router-dom";
 
-export const ItemListContainer = ({ items , saludo }) => {
+export const ItemListContainer = ({ items, saludo }) => {
   const [productos, setProductos] = useState([]);
 
-  const { id } = useParams();
-  console.log(id);
+  const { categoria } = useParams();
+  // console.log(id);
 
   useEffect(() => {
     const promesa = new Promise((res, rej) => {
       setTimeout(() => {
-        res(items);
+        if (!categoria) {
+          res(items);
+          console.log("no llega al filter");
+        } else {
+          console.log("llega al filter que no filter");
+          res(items.filter((item) => item.categoria == categoria));
+        }
       }, 2000);
-    }, []);
+
+    });
 
     promesa
       .then((products) => {
         setProductos(products);
       })
       .catch(() => {
-        console.log("Error en el catch de ItemListContainer")
+        console.log("Error en el catch de ItemListContainer");
       });
-  });
+  } , [categoria]);
 
   return (
     <div>

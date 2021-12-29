@@ -3,6 +3,6 @@
     { "id": 2, "nombre": "Bochin",  "descripcion": "Pequeña vela de sitio", "categoria":"velas", "precio": 150, "img":"/bochin.jpg", "stock": 12, "initial":0  },
     { "id": 3, "nombre": "Velon",   "descripcion": "Velon de Sition", "categoria":"velas", "precio": 200, "img":"./velon.jpg", "stock": 12, "initial":0  },
     { "id": 4, "nombre": "Esencia", "descripcion": "Para utilizar con hornitos", "categoria":"perfumes", "precio": 200, "img":"/esencia.jpg", "stock": 12, "initial":0  },
-    { "id": 5, "nombre": "Recarga", "descripcion": "Recarga de tus recipientes", "categoria":"perfumes", "precio": 200, "img":"/recarga.jpg", "stock": 12, "initial":0  }
+    { "id": 5, "nombre": "Recarga", "descripcion": "Recarga de tus recipientes", "categoria":"velas", "precio": 200, "img":"/recarga.jpg", "stock": 12, "initial":0  }
 
   ]
