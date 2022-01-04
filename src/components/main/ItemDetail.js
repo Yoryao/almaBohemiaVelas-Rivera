@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState , useContext } from "react";
 import ItemCount from "../section/ItemCount";
 import { Link } from "react-router-dom";
+import {CartContext} from "../../context"
+
 
 export const ItemDetail = (props) => {
 
@@ -18,9 +20,10 @@ if(ocultar) {
   return (
     <div>
       <img alt="logo" src={props.detail.img} />
-      <h3>Nombre: {props.detail.nombre}</h3>
-      <h3>Descripción: {props.detail.descripcion}</h3>
-      <h3>Precio: ${props.detail.precio}</h3>
+      <h4>Nombre: {props.detail.nombre}</h4>
+      <h4>Descripción: {props.detail.descripcion}</h4>
+      <h4>Categoria: {props.detail.categoria}</h4>
+      <h4>Precio: ${props.detail.precio}</h4>
       <ItemCount
         stock={7}
         initial={0} 
