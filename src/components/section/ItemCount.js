@@ -1,9 +1,13 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { MyHook } from "../../../src/context/CartContext"
+
 
 function ItemCount({ stock, initial, onAdd }) {
+
   //console.log(initial)
   const [contador, setContador] = useState(initial);
+  
+  const { setCantidad } = MyHook();
 
   function sumar() {
     if (contador < stock && stock !== 0) {
@@ -17,7 +21,7 @@ function ItemCount({ stock, initial, onAdd }) {
   }
   
   function agregarItem() {
-    console.log("agregando desde Item Count con onAdd");
+    setCantidad(contador);
     onAdd(contador);
 
   }

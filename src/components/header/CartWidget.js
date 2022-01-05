@@ -1,17 +1,20 @@
-import React, { useContext , createContext } from "react";
-import App from "../../App";
-
+import React  from "react";
+import { MyHook } from "../../../src/context/CartContext"
+ 
 
 
 function CartWidget() {
-  const cantidad = 0;
 
+  const { cantidad } = MyHook();
+  
+
+  
   return (
     <>
    
         <button>
           <span className="material-icons">shopping_cart</span>
-          <span>HOLA: {cantidad}</span>
+          <span>HOLA: { cantidad }</span>
         </button>
      
     </>

@@ -13,12 +13,14 @@ import Contact from "./components/main/Contact";
 
 
 //import react
-import React, { useContext } from "react";
+import React  from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Provider from "../src/context/CartContext"
+
 
 function App() {
   return (
-    
+    <Provider>
       <BrowserRouter>
           <NavBar marca={"alma Bohemia"} links={links} />
       <Routes>
@@ -33,7 +35,7 @@ function App() {
         </Routes>
           <Footer />
       </BrowserRouter>
-    
+      </Provider>    
   );
 }
 

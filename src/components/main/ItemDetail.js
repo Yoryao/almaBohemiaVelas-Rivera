@@ -1,14 +1,14 @@
-import React, { useState , useContext } from "react";
+import React, { useState } from "react";
 import ItemCount from "../section/ItemCount";
 import { Link } from "react-router-dom";
 //import { CartProvider } from "../../context"
 
 
-export const ItemDetail = (props) => {
+ const ItemDetail = (props) => {
 
 const [ocultar, setOcultar] = useState(true)
-const [stock, setStock] = useState( parseInt(props.detail.stock))
-const [inicial, setInicial] = useState( parseInt(props.detail.initial))
+const [stock, setStock] = useState(12)
+const [inicial, setInicial] = useState( 0)
 
 
 const onAdd = (contador) => {
@@ -16,6 +16,8 @@ console.log("Contador desde ItemDetail");
 setOcultar(false);
 setInicial(contador);
 }
+
+console.log(stock)
 
 if(ocultar) {
 
@@ -26,7 +28,7 @@ if(ocultar) {
       <h4>Descripción: {props.detail.descripcion}</h4>
       <h4>Categoria: {props.detail.categoria}</h4>
       <h4>Precio: ${props.detail.precio}</h4>
-      <h4>Stock: {stock}</h4>
+      <h4>Stock: {stock} unidades</h4>
 
       <ItemCount
         stock={stock}
