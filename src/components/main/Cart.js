@@ -16,7 +16,7 @@ function Cart() {
             Soy Cart
             <p>{elementos}</p>
             
-            <Link to={`/`}><button variant="primary">Seguir Comprando</button>
+            <Link to={`/productos`}><button variant="primary">Seguir Comprando</button>
         </Link>
 
 

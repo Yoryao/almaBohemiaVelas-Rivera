@@ -7,7 +7,7 @@ function ItemCount({ stock, initial, onAdd }) {
   //console.log(initial)
   const [contador, setContador] = useState(initial);
   
-  const { setCantidad } = MyHook();
+  const { setCantidad, agregarAlCarrito } = MyHook();
 
   function sumar() {
     if (contador < stock && stock !== 0) {
@@ -21,7 +21,7 @@ function ItemCount({ stock, initial, onAdd }) {
   }
   
   function agregarItem() {
-    setCantidad(contador);
+    agregarAlCarrito();
     onAdd(contador);
 
   }

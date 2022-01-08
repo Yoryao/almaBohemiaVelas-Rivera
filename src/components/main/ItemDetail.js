@@ -1,53 +1,54 @@
 import React, { useState } from "react";
 import ItemCount from "../section/ItemCount";
 import { Link } from "react-router-dom";
+import { MyHook } from "../../context/CartContext";
 //import { CartProvider } from "../../context"
 
 
- const ItemDetail = (props) => {
+const ItemDetail = (  {producto} ) => {
+  
+  const { agregarAlCarrito } = MyHook();
+  
+  const [ocultar, setOcultar] = useState(true);
+  const [stock, setStock] = useState(12);
+  const [inicial, setInicial] = useState(0);
 
-const [ocultar, setOcultar] = useState(true)
-const [stock, setStock] = useState(12)
-const [inicial, setInicial] = useState( 0)
+  const onAdd = (contador) => {
+    console.log("Contador desde ItemDetail");
+    setOcultar(false);
+    setInicial(contador);
+    agregarAlCarrito( producto.nombre, contador);
+  };
 
+  if (ocultar) {
+    return (
+      <div>
+        <img alt="logo" src={producto.img} />
+        <h4>Nombre: {producto.nombre}</h4>
+        <h4>Descripción: {producto.descripcion}</h4>
+        <h4>Categoria: {producto.categoria}</h4>
+        <h4>Precio: ${producto.precio}</h4>
+        <h4>Stock: {stock} unidades</h4>
 
-const onAdd = (contador) => {
-console.log("Contador desde ItemDetail");
-setOcultar(false);
-setInicial(contador);
-}
-
-console.log(stock)
-
-if(ocultar) {
-
-  return (
-    <div>
-      <img alt="logo" src={props.detail.img} />
-      <h4>Nombre: {props.detail.nombre}</h4>
-      <h4>Descripción: {props.detail.descripcion}</h4>
-      <h4>Categoria: {props.detail.categoria}</h4>
-      <h4>Precio: ${props.detail.precio}</h4>
-      <h4>Stock: {stock} unidades</h4>
-
-      <ItemCount
-        stock={stock}
-        initial={inicial} 
-        onAdd={onAdd}
-      />
-    </div>
-  );
-} else {
-  return (
-    <div>
-      <img alt="logo" src={props.detail.img} />
-      <h3>Nombre: {props.detail.nombre}</h3>
-      <h3>Descripción: {props.detail.descripcion}</h3>
-      <h3>Notificación: se agregaron {inicial} unidades</h3>
-      <Link to={`/cart`}><button variant="primary">Terminar Comprar</button>
+        <ItemCount stock={stock} initial={inicial} onAdd={onAdd} />
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        <img alt="logo" src={producto.img} />
+        <h3>Nombre: {producto.nombre}</h3>
+        <h3>Descripción: {producto.descripcion}</h3>
+        <h3>Notificación: se agregaron {inicial} unidades</h3>
+        <Link to={`/cart`}>
+          <button variant="primary">Terminar Comprar</button>
         </Link>
-         </div>
-  )}
+        <Link to={`/productos`}>
+          <button variant="primary">Seguir Comprando</button>
+        </Link>
+      </div>
+    );
+  }
 };
 
 export default ItemDetail;

@@ -5,7 +5,7 @@ import { MyHook } from "../../../src/context/CartContext"
 
 function CartWidget() {
 
-  const { cantidad } = MyHook();
+  const { cantidadItems } = MyHook();
   
 
   
@@ -14,7 +14,7 @@ function CartWidget() {
    
         <button>
           <span className="material-icons">shopping_cart</span>
-          <span>HOLA: { cantidad }</span>
+          <span>HOLA: { cantidadItems }</span>
         </button>
      
     </>

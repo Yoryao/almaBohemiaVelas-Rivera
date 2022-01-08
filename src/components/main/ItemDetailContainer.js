@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 
 
 export const ItemDetailContainer = ( {items , saludo}) => {
-  const [detail, setDetail] = useState({});
+  const [producto, setProducto] = useState({});
 
   let {id} = useParams();
 
@@ -12,13 +12,13 @@ export const ItemDetailContainer = ( {items , saludo}) => {
     const promesa = new Promise((res, rej) => {
       setTimeout(() => {
         res(items.find((item) => item.id == id));
-      }, 2000);
+      }, 2);
     }, []);
 
     promesa
       .then((seleccionado) => {
         console.log("Funca el detalle");
-        setDetail(seleccionado);
+        setProducto(seleccionado);
       })
       .catch(() => {
         console.log("no funca el Detalle");
@@ -30,7 +30,7 @@ export const ItemDetailContainer = ( {items , saludo}) => {
   return (
     <div>
       <h1> {saludo} </h1>
-      <ItemDetail detail={detail}></ItemDetail>
+      <ItemDetail producto={producto}></ItemDetail>
     </div>
   );
   
