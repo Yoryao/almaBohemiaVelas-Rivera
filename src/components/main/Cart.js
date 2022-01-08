@@ -4,13 +4,16 @@ import { MyHook } from "../../../src/context/CartContext";
 
 function Cart() {
   const { carrito } = MyHook();
+  console.log(carrito);
   return (
     <>
-      {carrito.forEach((element) => {
+      {carrito.map((element) => {
         return (
           <div>
-            <h1>{element.nombre}</h1>
-            <h1>{element.precio}</h1>
+            <h3>Listado de productos en carrito</h3>
+            <span>Nombre: {element.nombre}</span>
+            <span>Precio: ${element.precio}</span>
+            <button>Del</button>
           </div>
         );
       })}
