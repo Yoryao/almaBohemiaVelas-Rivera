@@ -7,7 +7,7 @@ import { MyHook } from "../../context/CartContext";
 
 const ItemDetail = (  {producto} ) => {
   
-  const { agregarAlCarrito } = MyHook();
+  const { agregarAlCarrito  } = MyHook();
   
   const [ocultar, setOcultar] = useState(true);
   const [stock, setStock] = useState(12);
@@ -17,7 +17,7 @@ const ItemDetail = (  {producto} ) => {
     console.log("Contador desde ItemDetail");
     setOcultar(false);
     setInicial(contador);
-    agregarAlCarrito( producto.nombre, contador);
+    agregarAlCarrito( producto, contador);
   };
 
   if (ocultar) {
