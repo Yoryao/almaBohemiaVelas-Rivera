@@ -21,7 +21,7 @@ function ItemCount({ stock, initial, onAdd }) {
   }
   
   function agregarItem() {
-    agregarAlCarrito();
+    //agregarAlCarrito();
     onAdd(contador);
 
   }

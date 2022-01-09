@@ -22,11 +22,22 @@ const MyProvider = ({ children }) => {
   const [carrito, setCarrito] = useState([]);
 
   //fx para agregar producto y cantidad al carrito
-  const agregarAlCarrito = (producto, cantidad) => {
+  const agregarAlCarrito = (producto, cantidad, id) => {
+
+
+
+
+
+
+
+
     setCantidadItems(cantidadItems + 1);    
     
     const copia_producto = {...producto}
     copia_producto.cantidad = cantidad
+
+
+    ////TODO: NO ESTA SUMANDO EL ULTIMO PRECIO A LA CUENTA TOTAL
 
    setPrecioParcial(copia_producto.precio * cantidad)
    setPrecioTotal(precioTotal + precioParcial)
@@ -43,15 +54,30 @@ const MyProvider = ({ children }) => {
   };
 
   //fx para borrar un producto del carrito
-  const borrarDelCarrito = () => {};
+  const borrarDelCarrito = ( id ) => {
+
+    console.log("borrando elemento con id_ " + id)
+
+
+  };
 
   //borrar todo el carrito
-  const vaciarCarrito = () => {
+  const clear = () => {
     setCarrito([]);
+    setPrecioTotal(0);
+    setPrecioParcial(0);
   };
 
   //verificacion si el producto esta en el carrito
-  const isInCarrito = (id) => {};
+  const isInCarrito = (id) => {
+
+
+
+
+
+
+
+  };
 
   const valorDelContexto = {
     cantidad,    setCantidad,
@@ -60,7 +86,7 @@ const MyProvider = ({ children }) => {
     cantidadItems, setCantidadItems,
     agregarAlCarrito,
     borrarDelCarrito,
-    vaciarCarrito,
+    clear,
     isInCarrito,
   };
 
