@@ -22,35 +22,24 @@ const MyProvider = ({ children }) => {
 
   //fx para agregar producto y cantidad al carrito
   const agregarAlCarrito = (producto, cantidad, id) => {
-   
-    setCantidadItems(cantidadItems + 1);
-    
-    const copia_producto = { ...producto };
-    copia_producto.cantidad = cantidad;
-    
-    const copia = [...carrito];
-    copia.push(copia_producto);
-    setCarrito(copia);
-          
-    // if(true){
-        
-        
-        //     let cantidadModificada = carrito.find((item) => item.id == id)
-        //     cantidadModificada.cantidad = cantidad;
-        
-        // } else {
-            
-            //     setCantidadItems(cantidadItems + 1);
-            
-            //     const copia_producto = { ...producto };
-            //     copia_producto.cantidad = cantidad;
-            
-            //     const copia = [...carrito];
-            //     copia.push(copia_producto);
-            //     setCarrito(copia);
-            
-        };
+    if (isInCarrito(id)) {
+      let cantidadModificada = carrito.find((item) => item.id == id);
+      cantidadModificada.cantidad += cantidad;
 
+      const newCarrito = carrito.filter((item) => item.id !== id);
+      newCarrito.push(cantidadModificada);
+      setCarrito(newCarrito);
+    } else {
+      setCantidadItems(cantidadItems + 1);
+
+      const copia_producto = { ...producto };
+      copia_producto.cantidad = cantidad;
+
+      const copia = [...carrito];
+      copia.push(copia_producto);
+      setCarrito(copia);
+    }
+  };
   //fx para borrar un producto del carrito
   const borrarDelCarrito = (id) => {
     const newCarrito = carrito.filter((item) => item.id !== id);
@@ -66,18 +55,11 @@ const MyProvider = ({ children }) => {
     setCantidadItems(0);
   };
 
-
-
-//   //verificacion si el producto esta en el carrito
-  const isInCarrito = (id) => {}
-//     const idInCarrito = carrito.find((item) => item.id == id);
-// console.log(idInCarrito)
-//     if (idInCarrito == []) {
-//         return true;
-//     } else {
-//         return false;
-//     };
-//   };
+  //   //verificacion si el producto esta en el carrito
+  const isInCarrito = (id) => {
+    const isInCarrito = carrito.find((item) => item.id === id);
+    return isInCarrito ? true : false;
+  };
 
   const valorDelContexto = {
     cantidad,
@@ -86,7 +68,6 @@ const MyProvider = ({ children }) => {
     setCarrito,
     valorCarrito,
     setValorCarrito,
-
     cantidadItems,
     setCantidadItems,
     agregarAlCarrito,
