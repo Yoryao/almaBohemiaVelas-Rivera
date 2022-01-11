@@ -17,11 +17,10 @@ export const ItemDetailContainer = ( {items , saludo}) => {
 
     promesa
       .then((seleccionado) => {
-        console.log("Funca el detalle");
         setProducto(seleccionado);
       })
       .catch(() => {
-        console.log("no funca el Detalle");
+        console.log("Error en la promesa");
          });
   };
 

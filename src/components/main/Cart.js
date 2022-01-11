@@ -4,12 +4,9 @@ import { MyHook } from "../../../src/context/CartContext";
 
 function Cart() {
   const { carrito, clear, borrarDelCarrito, valorCarrito, setValorCarrito } = MyHook();
-  console.log(carrito);
-//   valorCarrito = 0;
 
-const sumall = carrito.map(item => item.precioParcial).reduce((prev, curr) => prev + curr, 0);
-console.log(parseInt(sumall))
-setValorCarrito(sumall);
+const totalCarrito = carrito.map(item => item.precioParcial).reduce((prev, curr) => prev + curr, 0);
+setValorCarrito(totalCarrito);
 
 
 
@@ -28,10 +25,8 @@ setValorCarrito(sumall);
             <span>Precio: ${element.precio} </span>
             <span>Cantidad: {element.cantidad} </span>
             <span>Precio Parcial: ${parcialProducto} </span>
-
-            <span>id : {element.id}</span>
             <button onClick={() => {borrarDelCarrito(element.id)}}>
-                Del</button>
+                Eliminar</button>
           </div>
         );
     })}

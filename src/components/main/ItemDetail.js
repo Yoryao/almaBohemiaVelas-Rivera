@@ -14,10 +14,9 @@ const ItemDetail = (  {producto} ) => {
   const [inicial, setInicial] = useState(0);
 
   const onAdd = (contador) => {
-    console.log("Contador desde ItemDetail");
     setOcultar(false);
     setInicial(contador);
-    agregarAlCarrito( producto, contador);
+    agregarAlCarrito( producto, contador, producto.id);
   };
 
   if (ocultar) {

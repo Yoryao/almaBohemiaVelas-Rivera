@@ -5,7 +5,7 @@ import { MyHook } from "../../../src/context/CartContext"
 
 function CartWidget() {
 
-  const { cantidadItems, carrito } = MyHook();
+  const { cantidadItems } = MyHook();
   
 
   
