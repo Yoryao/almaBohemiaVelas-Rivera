@@ -3,15 +3,43 @@ import { Link } from "react-router-dom";
 import { MyHook } from "../../../src/context/CartContext";
 
 function Cart() {
-  const { carrito, clear, borrarDelCarrito, valorCarrito, setValorCarrito } = MyHook();
+  const { carrito, setCarrito, clear, borrarDelCarrito, valorCarrito, setValorCarrito, setCantidadItems, cantidadItems } = MyHook();
 
 const totalCarrito = carrito.map(item => item.precioParcial).reduce((prev, curr) => prev + curr, 0);
 setValorCarrito(totalCarrito);
 
 
+const sumar = ( id ) => {
+
+    let cantidadModificada = carrito.find((item) => item.id == id);
+    cantidadModificada.cantidad++;
+setCantidadItems(cantidadItems + 1)
+
+    const newCarrito = carrito.filter((item) => item.id !== id);
+    newCarrito.push(cantidadModificada);
+    setCarrito(newCarrito);
+
+}
+
+const restar = ( id ) => {
+
+    let cantidadModificada = carrito.find((item) => item.id == id);
+    if (cantidadModificada.cantidad > 0) {
+    cantidadModificada.cantidad--;}
+    setCantidadItems(cantidadItems -1 )
+
+
+    const newCarrito = carrito.filter((item) => item.id !== id);
+    newCarrito.push(cantidadModificada);
+    setCarrito(newCarrito);
+
+}
 
   return (
     <>
+        {carrito.length > 0 ? (
+
+    <div>
           <h3>Listado de productos en carrito</h3>
       {carrito.map((element) => {
 
@@ -25,17 +53,25 @@ setValorCarrito(totalCarrito);
             <span>Precio: ${element.precio} </span>
             <span>Cantidad: {element.cantidad} </span>
             <span>Precio Parcial: ${parcialProducto} </span>
-            <button onClick={() => {borrarDelCarrito(element.id)}}>
-                Eliminar</button>
+            <button onClick={() => {sumar(element.id)}}>sumar</button>
+            <button onClick={() => {restar(element.id)}}>restar</button>
+            <button onClick={() => {borrarDelCarrito(element.id)}}>     Eliminar</button>
           </div>
         );
-    })}
+    })};
     <span>Precio Total del carrito: ${valorCarrito}</span>
+    </div>
+        ) : <p>El carrito esta Vacio</p>}
+    
+    
+    
+    
       <Link to={`/productos`}>
         <button variant="primary">Seguir Comprando</button>
       </Link>
       <button onClick={clear} variant="primary">Vaciar Carrito</button>
 
+      <button  variant="primary">Pagar</button>
 
     </>
   );
