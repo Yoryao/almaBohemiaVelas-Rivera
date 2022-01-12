@@ -23,29 +23,38 @@ const MyProvider = ({ children }) => {
   //fx para agregar producto y cantidad al carrito
   const agregarAlCarrito = (producto, cantidad, id) => {
     if (isInCarrito(id)) {
+
+
       let cantidadModificada = carrito.find((item) => item.id == id);
       cantidadModificada.cantidad += cantidad;
 
       const newCarrito = carrito.filter((item) => item.id !== id);
       newCarrito.push(cantidadModificada);
       setCarrito(newCarrito);
+
+        setCantidadItems(cantidadItems + cantidad);
+
+
     } else {
-      setCantidadItems(cantidadItems + 1);
+        
+        const copia_producto = { ...producto };
+        copia_producto.cantidad = cantidad;
+        
+        const copia = [...carrito];
+        copia.push(copia_producto);
+        setCarrito(copia);
 
-      const copia_producto = { ...producto };
-      copia_producto.cantidad = cantidad;
-
-      const copia = [...carrito];
-      copia.push(copia_producto);
-      setCarrito(copia);
+        setCantidadItems(cantidadItems + copia_producto.cantidad);
     }
   };
   //fx para borrar un producto del carrito
   const borrarDelCarrito = (id) => {
+const cantidadBorrada = carrito.find((item) => item.id === id)
+
     const newCarrito = carrito.filter((item) => item.id !== id);
 
     setCarrito(newCarrito);
-    setCantidadItems(cantidadItems - 1);
+    setCantidadItems(cantidadItems - cantidadBorrada.cantidad);
   };
 
   //borrar todo el carrito

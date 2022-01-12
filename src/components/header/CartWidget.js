@@ -11,12 +11,13 @@ function CartWidget() {
   
   return (
     <>
+    { cantidadItems !== 0 ? (
    
         <button>
           <span className="material-icons">shopping_cart</span>
-          <span>HOLA: { cantidadItems }</span>
+          <span>{ cantidadItems }</span>
         </button>
-     
+    ) : <p>Empty Cart</p> }
     </>
   );
 }
