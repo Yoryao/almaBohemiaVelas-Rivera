@@ -5,7 +5,7 @@ import { MyHook } from "../../context/CartContext";
 //import { CartProvider } from "../../context"
 
 
-const ItemDetail = (  {producto} ) => {
+const ItemDetail = (  { producto } ) => {
   
   const { agregarAlCarrito  } = MyHook();
   
@@ -17,6 +17,7 @@ const ItemDetail = (  {producto} ) => {
     setOcultar(false);
     setInicial(contador);
     agregarAlCarrito( producto, contador, producto.id);
+    
   };
 
   if (ocultar) {
@@ -24,6 +25,8 @@ const ItemDetail = (  {producto} ) => {
       <div>
         <img alt="logo" src={producto.img} />
         <h4>Nombre: {producto.nombre}</h4>
+        <h4>ID: {producto.id}</h4>
+
         <h4>Descripción: {producto.descripcion}</h4>
         <h4>Categoria: {producto.categoria}</h4>
         <h4>Precio: ${producto.precio}</h4>

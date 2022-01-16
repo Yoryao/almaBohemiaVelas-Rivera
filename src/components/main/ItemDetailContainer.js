@@ -17,32 +17,13 @@ export const ItemDetailContainer = ({ items, saludo }) => {
 
       getDoc(consulta)
         .then((resultado) => {
-          setProducto(resultado.data());
-        })
+          setProducto({ id: id, ...resultado.data() });
+         })
         .catch((error) => {
           console.log(error);
         });
     },   [id]
     );
-
-    // const getItem = () => {
-    //   const promesa = new Promise((res, rej) => {
-    //     setTimeout(() => {
-    //       res(items.find((item) => item.id == id));
-    //     }, 2);
-    //   }, []);
-
-    //   promesa
-    //     .then((seleccionado) => {
-    //       setProducto(seleccionado);
-    //     })
-    //     .catch(() => {
-    //       console.log("Error en la promesa");
-    //        });
-    // };
-
-    // useEffect(() => getItem(),
- 
 
   return (
     <div>
