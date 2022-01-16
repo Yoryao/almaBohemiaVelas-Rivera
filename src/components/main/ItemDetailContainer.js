@@ -1,38 +1,36 @@
 import React, { useState, useEffect } from "react";
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
+import { collection, doc, getDoc } from "firebase/firestore";
+import { db } from "../../firebase";
 
-
-export const ItemDetailContainer = ( {items , saludo}) => {
+export const ItemDetailContainer = ({ items, saludo }) => {
   const [producto, setProducto] = useState({});
 
-  let {id} = useParams();
+  let { id } = useParams();
 
-  const getItem = () => {
-    const promesa = new Promise((res, rej) => {
-      setTimeout(() => {
-        res(items.find((item) => item.id == id));
-      }, 2);
-    }, []);
+  useEffect(
+    () => {
+      const productosQuery = collection(db, "productos");
 
-    promesa
-      .then((seleccionado) => {
-        setProducto(seleccionado);
-      })
-      .catch(() => {
-        console.log("Error en la promesa");
-         });
-  };
+      const consulta = doc(productosQuery, id);
 
-  useEffect(() => getItem(), [id]);
- 
+      getDoc(consulta)
+        .then((resultado) => {
+          setProducto({ id: id, ...resultado.data() });
+         })
+        .catch((error) => {
+          console.log(error);
+        });
+    },   [id]
+    );
+
   return (
     <div>
       <h1> {saludo} </h1>
       <ItemDetail producto={producto}></ItemDetail>
     </div>
   );
-  
 };
 
 export default ItemDetailContainer;
