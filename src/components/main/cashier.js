@@ -1,21 +1,30 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { MyHook } from "../../../src/context/CartContext";
 
-const Cashier = ( id ) => {
 
-console.log(id)
+const Cashier = () => {
+
+const clearOrder = () =>
+{
+    setOrden("");
+}
+
+    const {
+        orden, 
+        setOrden,
+      } = MyHook();
 
     return (
         <>
 
-<h2>{"Su compra se ha registrado con el id: " + id}</h2>
+<h2>{"Su compra se ha registrado con el id: " + orden}</h2>
+
 
 <Link to={`/productos`}>
-          <button variant="primary">Seguir Comprando</button>
+          <button onClick={clearOrder} variant="primary">Seguir Comprando</button>
         </Link>
-
-
-        </>
+       </>
     )
 }
 

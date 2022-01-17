@@ -18,6 +18,8 @@ let id;
     setValorCarrito,
     setCantidadItems,
     cantidadItems,
+    orden, 
+    setOrden
   } = MyHook();
 
   const totalCarrito = carrito
@@ -55,6 +57,7 @@ addDoc(orderCollection, {nuevaOrden})
        (resultado)  =>  {
         console.log(resultado);
         console.log("Document written with ID: ", resultado.id);
+        setOrden(resultado.id);
         clear();
       })     
   };
