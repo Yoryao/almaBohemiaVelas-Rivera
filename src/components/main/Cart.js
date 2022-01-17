@@ -1,8 +1,14 @@
 import React from "react";
+import { collection, addDoc } from "firebase/firestore";
 import { Link } from "react-router-dom";
 import { MyHook } from "../../../src/context/CartContext";
+import { db } from "../../firebase";
+import { serverTimestamp } from "firebase/firestore";
 
 function Cart() {
+
+let id;
+
   const {
     carrito,
     setCarrito,
@@ -31,7 +37,26 @@ function Cart() {
       cantidadModificada.cantidad--;
     }
     setCantidadItems(cantidadItems - 1);
+  };
 
+  const pay = () => {
+    const nuevaOrden = {
+      cliente: "John Doe",
+      telefono: 1122334455,
+      email: "email@email",
+      productos: carrito,
+      fecha: serverTimestamp(),
+      total: totalCarrito,
+    };
+
+const orderCollection = collection(db, "orders");
+addDoc(orderCollection, {nuevaOrden})
+    .then( 
+       (resultado)  =>  {
+        console.log(resultado);
+        console.log("Document written with ID: ", resultado.id);
+        clear();
+      })     
   };
 
   return (
@@ -86,8 +111,10 @@ function Cart() {
       <button onClick={clear} variant="primary">
         Vaciar Carrito
       </button>
-
-      <button variant="primary">Pagar</button>
+      <Link to={`/cashier`} props={id}>
+      <button onClick={pay} variant="primary">
+        Pagar
+      </button> </Link>
     </>
   );
 }

@@ -10,8 +10,6 @@ export const Item = (props) => {
       <img variant="top" src={props.img} alt="" />
       <div>
         <h2>Nombre: {props.nombre}</h2>
-        <h2>id: {props.id}</h2>
-
         <h4>Precio: $ {props.precio}</h4>
         <Link to={`/item/${props.id}`}><button variant="primary">Ver Detalle</button>
         </Link>
