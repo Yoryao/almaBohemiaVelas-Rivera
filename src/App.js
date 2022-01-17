@@ -32,7 +32,7 @@ function App() {
           <Route path="/item/:id" element={ <ItemDetailContainer items={items} saludo={"Detalle del Producto"} /> } />
           <Route path="/contacto" element={<Contact />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/cashier" element={<Cashier />} />
+          <Route path="/cashier"  element={<Cashier />} />
 
           <Route path="" />
         </Routes>

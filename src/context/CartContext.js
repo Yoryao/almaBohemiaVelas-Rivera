@@ -11,6 +11,8 @@ export const MyHook = () => {
 };
 
 const MyProvider = ({ children }) => {
+
+  const [orden, setOrden] = useState("")
   //cantidad de productos
   const [cantidad, setCantidad] = useState(0);
   //cantidad de items
@@ -83,6 +85,8 @@ const cantidadBorrada = carrito.find((item) => item.id === id)
     borrarDelCarrito,
     clear,
     isInCarrito,
+    orden,
+    setOrden
   };
 
   return <Provider value={valorDelContexto}>{children}</Provider>;
