@@ -16,6 +16,7 @@ import Contact from "./components/main/Contact";
 import React  from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Provider from "../src/context/CartContext"
+import Cashier from "./components/main/cashier";
 
 
 function App() {
@@ -31,6 +32,8 @@ function App() {
           <Route path="/item/:id" element={ <ItemDetailContainer items={items} saludo={"Detalle del Producto"} /> } />
           <Route path="/contacto" element={<Contact />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/cashier" element={<Cashier />} />
+
           <Route path="" />
         </Routes>
           <Footer />
