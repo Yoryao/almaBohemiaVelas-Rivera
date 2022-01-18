@@ -1,5 +1,6 @@
 #divProductos {
     margin-top: 60px;
+    margin-bottom: 60px;
 }
 
 img {
@@ -25,3 +26,30 @@ img {
     border: red 1px solid;
 
 }
+
+#detailInfo {
+width: 80%;
+border: green 1px solid;
+margin-left: auto;
+margin-right: auto;
+background-color: #dfdf98;
+
+}
+#detailDiv {
+    width: 100%;
+    border: brown 1px solid;
+    margin-top: 10px;
+    
+    }
+
+#detailButton {
+    width: 30%;
+    border: brown 1px solid;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    background-color: salmon;
+    
+    }
+    
