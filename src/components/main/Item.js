@@ -1,12 +1,12 @@
 import React from "react";
-
+import "./item.css"
 import { Link } from "react-router-dom";
 
 
 export const Item = (props) => {
 
   return (
-    <div className="card">
+    <div className="card" id="divProductos">
       <img variant="top" src={props.img} alt="" />
       <div>
         <h2>Nombre: {props.nombre}</h2>

@@ -1,0 +1,27 @@
+#divProductos {
+    margin-top: 60px;
+}
+
+img {
+    width: 18vw;
+    height: 18vw;
+    /* align-content: center;
+    justify-content: center;
+    align-items: center ; */
+    justify-items: center;
+}
+
+
+
+.card {
+    width: 20vw;
+    height: 25vw;
+    margin: 10px 5px 5px 10px;
+    display: flex;
+    display: inline-block;
+    justify-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: red 1px solid;
+
+}
