@@ -1,6 +1,28 @@
 footer {
-    background-color: darksalmon;
-    height: 25px;
-    text-align: center;
-    margin-bottom: 0;
+  background-color: #d4c069;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  color: black;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.color1 {
+  color: #d4676d;
+}
+.color2 {
+  color: #d18f57;
+}
+.color3 {
+  color: #d4c069;
+}
+.color4 {
+  color: #dfdf98;
+}
+.color5 {
+  color: #ebeacb;
 }
