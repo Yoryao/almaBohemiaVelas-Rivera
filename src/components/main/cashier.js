@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { MyHook } from "../../../src/context/CartContext";
+import "./cashier.css"
 
 
 const Cashier = () => {
@@ -16,7 +17,7 @@ const clearOrder = () =>
       } = MyHook();
 
     return (
-        <>
+        <div id="divCashier">
 
 <h2>{"Su compra se ha registrado con el id: " + orden}</h2>
 
@@ -24,7 +25,7 @@ const clearOrder = () =>
 <Link to={`/productos`}>
           <button onClick={clearOrder} variant="primary">Seguir Comprando</button>
         </Link>
-       </>
+       </div>
     )
 }
 

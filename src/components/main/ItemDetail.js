@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ItemCount from "../section/ItemCount";
 import { Link } from "react-router-dom";
 import { MyHook } from "../../context/CartContext";
+import "./itemDetail.css"
 
 
 const ItemDetail = (  { producto } ) => {
@@ -20,12 +21,11 @@ const ItemDetail = (  { producto } ) => {
 
   if (ocultar) {
     return (
-      <div>
-        <img alt="logo" src={producto.img} />
+      <div id="cardDetail">
+        <img id="imgDetail" alt="logo" src={producto.img} />
         <h4>Descripción: {producto.descripcion}</h4>
         <h4>Categoria: {producto.categoria}</h4>
         <h4>Precio: ${producto.precio}</h4>
-        <h4>Stock: {stock} unidades</h4>
 
         <ItemCount stock={stock} initial={inicial} onAdd={onAdd} />
       </div>

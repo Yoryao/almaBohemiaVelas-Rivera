@@ -17,7 +17,7 @@ function CartWidget() {
           <span className="material-icons">shopping_cart</span>
           <span>{ cantidadItems }</span>
         </button>
-    ) : <p>Empty Cart</p> }
+    ) : <p>Carrito Vacio</p> }
     </>
   );
 }

@@ -1,9 +1,9 @@
 import React from "react";
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { Link } from "react-router-dom";
 import { MyHook } from "../../../src/context/CartContext";
 import { db } from "../../firebase";
-import { serverTimestamp } from "firebase/firestore";
+import "./cart.css"
 
 function Cart() {
 
@@ -54,24 +54,26 @@ let id;
 const orderCollection = collection(db, "orders");
 addDoc(orderCollection, {nuevaOrden})
     .then( 
-       (resultado)  =>  {
+     async  (resultado)  =>  {
         console.log(resultado);
         console.log("Document written with ID: ", resultado.id);
-        setOrden(resultado.id);
+        await setOrden(resultado.id);
         clear();
       })     
   };
 
   return (
-    <>
+    <div id="mainCart">
       {carrito.length > 0 ? (
-        <div>
+        <div  id="mainCart">
           <h3>Listado de productos en carrito</h3>
           {carrito.map((element) => {
             let parcialProducto = element.cantidad * element.precio;
             element.precioParcial = parcialProducto;
 
             return (
+<div id="cashierDiv">
+
               <div>
                 <span>Nombre: {element.nombre} </span>
                 <span>Precio: ${element.precio} </span>
@@ -100,9 +102,41 @@ addDoc(orderCollection, {nuevaOrden})
                   Eliminar
                 </button>
               </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
             );
-          })}
-          ;<span>Precio Total del carrito: ${valorCarrito}</span>
+          })};
+          <span>Precio Total del carrito: ${valorCarrito}</span>
+
+<div id="buyForm">
+<input type="text" placeholder="Nombre"></input>
+<input type="telephone" placeholder="Telefono"></input>
+<input type="email" placeholder="Correo Electronico"></input>
+
+<Link to={`/cashier`} props={id}>
+<button onClick={pay} variant="primary">Pagar</button> </Link>
+
+<button onClick={clear} variant="primary">
+        Vaciar Carrito
+      </button>
+
+
+</div>
+
+
+
+
+
         </div>
       ) : (
         <p>El carrito esta Vacio</p>
@@ -111,14 +145,14 @@ addDoc(orderCollection, {nuevaOrden})
       <Link to={`/productos`}>
         <button variant="primary">Seguir Comprando</button>
       </Link>
-      <button onClick={clear} variant="primary">
-        Vaciar Carrito
-      </button>
-      <Link to={`/cashier`} props={id}>
-      <button onClick={pay} variant="primary">
-        Pagar
-      </button> </Link>
-    </>
+    
+
+       
+
+
+
+
+    </div>
   );
 }
 

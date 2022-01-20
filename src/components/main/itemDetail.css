@@ -1,0 +1,19 @@
+#cardDetail {
+    width: 50%;
+    border: tomato 1px solid;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#imgDetail ´
+{
+    width: 25vh;
+    height: 25vh;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
