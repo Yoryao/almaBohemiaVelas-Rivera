@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { MyHook } from "../../../src/context/CartContext";
+import { MyHook } from "../../context/CartContext";
 import "./cashier.css"
 
 

@@ -32,7 +32,7 @@ export const ItemListContainer = ({ items, saludo }) => {
 
         })
         .catch((error) => {
-          console.log(error);
+          
         });
     }
   }, [categoria]);

@@ -16,7 +16,7 @@ import Contact from "./components/main/Contact";
 import React  from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Provider from "../src/context/CartContext"
-import Cashier from "./components/main/cashier";
+import Cashier from "./components/main/Cashier";
 
 
 function App() {

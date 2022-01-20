@@ -55,8 +55,6 @@ const orderCollection = collection(db, "orders");
 addDoc(orderCollection, {nuevaOrden})
     .then( 
      async  (resultado)  =>  {
-        console.log(resultado);
-        console.log("Document written with ID: ", resultado.id);
         await setOrden(resultado.id);
         clear();
       })     
