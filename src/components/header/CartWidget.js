@@ -1,23 +1,20 @@
 import React  from "react";
 import { MyHook } from "../../../src/context/CartContext"
+import "./cartWidget.css"
  
-
-
 function CartWidget() {
 
   const { cantidadItems } = MyHook();
-  
 
-  
   return (
     <>
     { cantidadItems !== 0 ? (
    
-        <button>
+        <button id="cartButton">
           <span className="material-icons">shopping_cart</span>
-          <span>{ cantidadItems }</span>
+          <span id="itemQuantity">{ cantidadItems }</span>
         </button>
-    ) : <p>Carrito Vacio</p> }
+    ) : <p id="emptyCart">Carrito Vacio</p> }
     </>
   );
 }

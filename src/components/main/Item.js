@@ -3,21 +3,21 @@ import "./item.css";
 import { Link } from "react-router-dom";
 
 export const Item = (props) => {
-  return (
-    <div className="card" id="divProductos">
-      <img variant="top" src={props.img} alt="" />
-      <div id="detailInfo">
-        <h2>Nombre: {props.nombre}</h2>
-        <h4>Precio: $ {props.precio}</h4>
-      </div>
-      <div id="detailDiv">
-        <Link to={`/item/${props.id}`}>
-          <button id="detailButton"  variant="primary">
-            Ver Detalle
-          </button>
-        </Link>
-      </div>
-    </div>
+    return (
+        <div className="card">
+            <img src={props.img} alt={`photo_${props.nombre}`} />
+            <div id="detailInfo">
+                <h3>Nombre: {props.nombre}</h3>
+                <h4>Precio: $ {props.precio}</h4>
+            </div>
+            <div>
+                <Link to={`/item/${props.id}`}>
+                    <button id="detailButton">
+                      Ver Detalle
+                    </button>
+                </Link>
+            </div>
+        </div>
   );
 };
 

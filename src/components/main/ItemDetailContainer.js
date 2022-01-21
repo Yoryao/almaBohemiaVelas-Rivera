@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { collection, doc, getDoc } from "firebase/firestore";
 import { db } from "../../firebase";
 
-export const ItemDetailContainer = ({ items, saludo }) => {
+export const ItemDetailContainer = ({ saludo }) => {
   const [producto, setProducto] = useState({});
 
   let { id } = useParams();
@@ -27,7 +27,7 @@ export const ItemDetailContainer = ({ items, saludo }) => {
 
   return (
     <div>
-      <h1> {saludo} </h1>
+      <h1 id="title">{saludo}</h1>
       <ItemDetail producto={producto}></ItemDetail>
     </div>
   );
