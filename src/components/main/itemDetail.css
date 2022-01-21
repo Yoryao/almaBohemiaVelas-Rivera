@@ -2,20 +2,33 @@
 
 #cardDetail {
     width: 50%;
-    border: tomato 1px solid;
+    border-radius: 10px;
+    border: black 1px solid;
     margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
 }
 
-#imgDetail ´
-{
-    width: 25vh;
-    height: 25vh;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
+#imgDetail {
+    display: flex;
+    width: 50%;
+    height: auto;
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
+}
+
+#infoDetail {
+    display: block;
+    width: 80%;
+    background-color: blanchedalmond;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    padding: 15px;
+
+    text-align: left;   
 }

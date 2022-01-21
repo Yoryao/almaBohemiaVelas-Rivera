@@ -3,16 +3,16 @@ import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
 import { collection, doc, getDoc } from "firebase/firestore";
 import { db } from "../../firebase";
+import "./itemDetailContainer.css"
 
 export const ItemDetailContainer = ({ saludo }) => {
-  const [producto, setProducto] = useState({});
 
+  const [producto, setProducto] = useState({});
   let { id } = useParams();
 
   useEffect(
     () => {
       const productosQuery = collection(db, "productos");
-
       const consulta = doc(productosQuery, id);
 
       getDoc(consulta)
@@ -22,13 +22,12 @@ export const ItemDetailContainer = ({ saludo }) => {
         .catch((error) => {
           console.log(error);
         });
-    },   [id]
-    );
+    }, [id] );
 
   return (
     <div>
-      <h1 id="title">{saludo}</h1>
-      <ItemDetail producto={producto}></ItemDetail>
+        <h1 id="title">{saludo}</h1>
+        <ItemDetail producto={producto}></ItemDetail>
     </div>
   );
 };

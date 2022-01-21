@@ -10,7 +10,6 @@ const ItemDetail = (  { producto } ) => {
   const { agregarAlCarrito  } = MyHook();
   
   const [ocultar, setOcultar] = useState(true);
-  const [stock, setStock] = useState(12);
   const [inicial, setInicial] = useState(0);
 
   const onAdd = (contador) => {
@@ -23,11 +22,14 @@ const ItemDetail = (  { producto } ) => {
     return (
       <div id="cardDetail">
         <img id="imgDetail" alt="logo" src={producto.img} />
-        <h4>Descripción: {producto.descripcion}</h4>
-        <h4>Categoria: {producto.categoria}</h4>
-        <h4>Precio: ${producto.precio}</h4>
-
-        <ItemCount stock={stock} initial={inicial} onAdd={onAdd} />
+          <div id="infoDetail">
+            <h3>Nombre: {producto.nombre}</h3>
+            <h4>Descripción: {producto.descripcion}</h4>
+            <h4>Precio: ${producto.precio}</h4>
+          </div>
+          <div>
+            <ItemCount initial={inicial} onAdd={onAdd} />
+          </div>
       </div>
     );
   } else {
