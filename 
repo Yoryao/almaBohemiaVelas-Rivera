@@ -1,0 +1,269 @@
+[33mcommit 7c471c1da5a71d30893141c47d48696424de4811[m[33m ([m[1;36mHEAD -> [m[1;32mdeliver[m[33m, [m[1;31morigin/deliver[m[33m)[m
+Author: yoryao <jorgejoaquinrivera@gmail.com>
+Date:   Fri Jan 21 01:00:30 2022 -0300
+
+    work from itemDetailContainer
+
+[33mcommit 7f31a208a72f5cc2d07c53912f8155fb3af42129[m[33m ([m[1;32mstyle[m[33m)[m
+Author: yoryao <jorgejoaquinrivera@gmail.com>
+Date:   Thu Jan 20 13:39:48 2022 -0300
+
+    working with style before deliver
+
+[33mcommit 8933ba5c6aa557fae49076318cca5c49853c7011[m
+Author: yoryao <jorgejoaquinrivera@gmail.com>
+Date:   Thu Jan 20 00:39:30 2022 -0300
+
+    trabajando con la rubrica
+
+[33mcommit abe58e52db2eace28d308521f9d0a6f7ba686d53[m
+Author: yoryao <jorgejoaquinrivera@gmail.com>
+Date:   Tue Jan 18 15:07:37 2022 -0300
+
+    working on cards spacing
+
+[33mcommit 9aa551af9911f1323244adc6a2f2bf0f0a35baff[m
+Author: yoryao <jorgejoaquinrivera@gmail.com>
+Date:   Tue Jan 18 14:25:24 2022 -0300
+
+    working with cards style
+
+[33mcommit e643046aaad97866d56da03dd249f208871b8011[m[33m ([m[1;31morigin/style[m[33m)[m
+Author: yoryao <jorgejoaquinrivera@gmail.com>
+Date:   Tue Jan 18 14:13:45 2022 -0300
+
+    working on navbar and footer style
+
+[33mcommit 03392e67b9c95270fd388ec8be3d3a5b0d413da5[m[33m ([m[1;31morigin/firebase[m[33m, [m[1;32mfirebase[m[33m)[m
+Author: yoryao <jorgejoaquinrivera@gmail.com>
+Date:   Mon Jan 17 17:57:58 2022 -0300
+
+    implementaciones parciales listas, revisando rubricas finales
+
+[33mcommit fd942b33d7ff09f8504ab7ba4f5e26d1ba86e56f[m
+Author: yoryao <jorgejoaquinrivera@gmail.com>
+Date:   Mon Jan 17 00:50:09 2022 -0300
+
+    ultimo desafio pre entrega
+
+[33mcommit 2d420ebd13d7731901194486a0ec7c84cc5074e1[m
+Author: yoryao <jorgejoaquinrivera@gmail.com>
+Date:   Sun Jan 16 16:11:50 2022 -0300
+
+    Firebase I ready
+
+[33mcommit d87f38cd75c0cbed21be5816109f0983d0e9859e[m
+Author: yoryao <jorgejoaquinrivera@gmail.com>
+Date:   Sun Jan 16 14:20:03 2022 -0300
+
+    querys working
+
+[33mcommit 13c4f1de0aa5d5f423b3ba39d6013a11b1558319[m[33m ([m[1;31morigin/context[m[33m, [m[1;32mcontext[m[33m)[m
+Author: yoryao <jorgejoaquinrivera@gmail.com>
+Date:   Wed Jan 12 16:14:21 2022 -0300
+
+    Cart View exercise
+
+[33mcommit 746093de15e690ccd7a19d5fa9103273dcbcbef1[m
+Author: yoryao <jorgejoaquinrivera@gmail.com>
+Date:   Tue Jan 11 19:40:33 2022 -0300
+
+    contaxt exercise
+
+[33mcommit 29bb5bf255cafd18cd5bc98082488eb5e5eab5d0[m
+Author: yoryao <jorgejoaquinrivera@gmail.com>
+Date:   Tue Jan 11 01:16:30 2022 -0300
+
+    addToCart, deleteItem, ClearCart ready. left isincart
+
+[33mcommit 54e8baf31e1822f2bdd5cbf35d2eca6a1daadc77[m
+Author: yoryao <jorgejoaquinrivera@gmail.com>
+Date:   Mon Jan 10 00:21:42 2022 -0300
+
+    falta la funcion isincart
+
+[33mcommit ddb218c21c7f449c546f47e40acc14f519668a06[m
+Author: yoryao <jorgejoaquinrivera@gmail.com>
+Date:   Sun Jan 9 15:13:38 2022 -0300
+
+    working on preentrega
+
+[33mcommit d6cd4785abdf05f3ae203fff4aa35654c096591d[m
+Author: yoryao <jorgejoaquinrivera@gmail.com>
+Date:   Sat Jan 8 18:36:23 2022 -0300
+
+    Cart Working
+
+[33mcommit a6eab4d756788c34b050fd2d1f6aa422e98a5552[m
+Author: yoryao <jorgejoaquinrivera@gmail.com>
+Date:   Sat Jan 8 02:03:47 2022 -0300
+
+    working on agregarAlCarrito with carrito array
+
+[33mcommit d29a49ff11e74c416abfe1f6a6b23af3c09c8b0a[m
+Author: yoryao <jorgejoaquinrivera@gmail.com>
+Date:   Sat Jan 8 01:08:35 2022 -0300
+
+    start working with context
+
+[33mcommit 0b9c73de7155faa121b1bfb7d0b5ae61de4723ac[m
+Author: yoryao <jorgejoaquinrivera@gmail.com>
+Date:   Wed Jan 5 07:55:05 2022 -0300
+
+    cartContext working
+
+[33mcommit 8c80ab016a966837438a21350a44981c9e863603[m
+Author: yoryao <jorgejoaquinrivera@gmail.com>
+Date:   Tue Jan 4 15:50:51 2022 -0300
+
+    working on itemcount
+
+[33mcommit 3d2afb948a96887e02fbef88e7d3b45b8b2d5adf[m
+Author: yoryao <jorgejoaquinrivera@gmail.com>
+Date:   Tue Jan 4 14:14:51 2022 -0300
+
+    context structure
+
+[33mcommit 0ffecb5748603eefd44c1d80eb0ee0a85ccfcca6[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m
+Author: yoryao <jorgejoaquinrivera@gmail.com>
+Date:   Wed Dec 29 14:49:40 2021 -0300
+
+    agregado de categorias
+
+[33mcommit b8fb9cb8dac749accfccc41b30ccc85902a3088e[m
+Author: yoryao <jorgejoaquinrivera@gmail.com>
+Date:   Tue Dec 28 00:08:20 2021 -0300
+
+    sincronizando counter
+
+[33mcommit 69b56344046fd944c97aa979a9230804632599a9[m
+Author: yoryao <jorgejoaquinrivera@gmail.com>
+Date:   Sun Dec 26 23:22:14 2021 -0300
+
+    routes problem solved and ItemDetail
+
+[33mcommit f78733bbbf86b883ae5a6570b53077b47e3c1386[m
+Author: yoryao <jorgejoaquinrivera@gmail.com>
+Date:   Thu Dec 23 13:02:27 2021 -0300
+
+    Comenzando de nuevo
+
+[33mcommit 8667096502be6e3d6f5329f37c25bf473917d560[m
+Merge: 50485ad ecef600
+Author: JORGE JOAQUIN RIVERA <78164599+Yoryao@users.noreply.github.com>
+Date:   Thu Dec 23 11:20:25 2021 -0300
+
+    Merge pull request #2 from Yoryao/develop
+    
+    Develop
+
+[33mcommit ecef6005208f843422802ddcf420ca8ffb081c08[m[33m ([m[1;31morigin/develop[m[33m)[m
+Author: yoryao <jorgejoaquinrivera@gmail.com>
+Date:   Thu Dec 23 10:51:16 2021 -0300
+
+    ultimas correcciones pre entrega intermedia
+
+[33mcommit 8ae8f8d3dfe7e0c270a792dddc250dc034c2eee3[m
+Author: yoryao <jorgejoaquinrivera@gmail.com>
+Date:   Wed Dec 22 16:30:43 2021 -0300
+
+    Routes Working
+
+[33mcommit d1dfa6b13a3c154006df2a02f80f71fa61c51485[m
+Author: yoryao <jorgejoaquinrivera@gmail.com>
+Date:   Wed Dec 22 12:23:03 2021 -0300
+
+    revision pre entrega intermedia - falta router
+
+[33mcommit 1c2eece53448409e03a61c03c6b161f3610b968c[m
+Author: yoryao <jorgejoaquinrivera@gmail.com>
+Date:   Mon Dec 20 15:45:37 2021 -0300
+
+    desafio detail completo
+
+[33mcommit ffbc4a283a82aed7655598cdcd33b55c843e3814[m
+Author: yoryao <jorgejoaquinrivera@gmail.com>
+Date:   Mon Dec 20 15:10:57 2021 -0300
+
+    item detail funcionando sin funcion getItem
+
+[33mcommit fee3a993351a2bb60546aca03b75862fd60854be[m
+Author: yoryao <jorgejoaquinrivera@gmail.com>
+Date:   Mon Dec 20 00:06:36 2021 -0300
+
+    just keep Trying
+
+[33mcommit 4ffa15706a6acdd5e32c9b008cb94f618c27f1b1[m
+Author: yoryao <jorgejoaquinrivera@gmail.com>
+Date:   Fri Dec 17 00:32:20 2021 -0300
+
+    estructura de ItemDetail y ItemDetailContainer
+
+[33mcommit 50485ad3b2cc07301d9c7cc9fa025eefa988b1d1[m
+Merge: 8989e5e 44eb7fd
+Author: JORGE JOAQUIN RIVERA <78164599+Yoryao@users.noreply.github.com>
+Date:   Thu Dec 16 15:12:44 2021 -0300
+
+    Merge pull request #1 from Yoryao/develop
+    
+    Develop
+
+[33mcommit 44eb7fdb29bfa884385b6e7ef86e9f0778403002[m
+Author: yoryao <jorgejoaquinrivera@gmail.com>
+Date:   Thu Dec 16 15:03:41 2021 -0300
+
+    implementacion de hooks
+
+[33mcommit e31970fb19fa48424830d7392f893260b1e48f13[m
+Author: yoryao <jorgejoaquinrivera@gmail.com>
+Date:   Thu Dec 16 01:18:32 2021 -0300
+
+    map y promise
+
+[33mcommit f2c5d862ce012c1ab259089811c86929cb687684[m
+Author: yoryao <jorgejoaquinrivera@gmail.com>
+Date:   Sun Dec 12 00:21:43 2021 -0300
+
+    agregado de la funcion onAdd
+
+[33mcommit 5bb4abf71696c2e72620858f74074b767f04b31e[m
+Author: yoryao <jorgejoaquinrivera@gmail.com>
+Date:   Sat Dec 11 23:44:49 2021 -0300
+
+    primer creacion del componente ItemCount
+
+[33mcommit 555dbb390979156fe12ff06d406c66b6a0de6f21[m
+Author: yoryao <jorgejoaquinrivera@gmail.com>
+Date:   Tue Dec 7 00:13:34 2021 -0300
+
+    commit tercera entrega: CartWidget & ItemListContainer
+
+[33mcommit cffaa90f2a3dad5ab9705fff862695d513719a10[m
+Author: yoryao <jorgejoaquinrivera@gmail.com>
+Date:   Wed Dec 1 00:21:45 2021 -0300
+
+    agregado del footer, falta editarlo
+
+[33mcommit fa0d8069554fa77abd1f9190fe23e55cd4a7bdab[m
+Author: yoryao <jorgejoaquinrivera@gmail.com>
+Date:   Tue Nov 30 23:28:35 2021 -0300
+
+    segunda entrega AlmaBohemiaVelasRivera
+
+[33mcommit 209fe7f57315b6a97db5d7a50313a640b60cf932[m
+Author: yoryao <jorgejoaquinrivera@gmail.com>
+Date:   Sat Nov 27 12:54:31 2021 -0300
+
+    tercera clase, agregado de navbar con bootstrap
+
+[33mcommit 8989e5ed0eb130d7043b5f87272aea24ff41053c[m
+Author: yoryao <jorgejoaquinrivera@gmail.com>
+Date:   Fri Nov 26 00:11:06 2021 -0300
+
+    app creation and initial changes on main page
+
+[33mcommit 8600b94207d38614ea280dc4e8416b971a7ea7e6[m
+Author: yoryao <jorgejoaquinrivera@gmail.com>
+Date:   Thu Nov 25 15:29:34 2021 -0300
+
+    Initialize project using Create React App

@@ -1,27 +1,26 @@
 
-
-#cardDetail {
+.cardDetail {
     width: 50%;
     border-radius: 10px;
-    border: black 1px solid;
+    border: silver 1px solid;
     margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
 }
 
-#imgDetail {
+.imgDetail {
     display: flex;
-    width: 50%;
-    height: auto;
+    width: 200px;
+    height: 200px;
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
 }
 
-#infoDetail {
+.infoDetail {
     display: block;
     width: 80%;
-    background-color: blanchedalmond;
+    background-color: blanchedalmondgr;
     align-items: center;
     justify-content: center;
     align-content: center;
@@ -32,3 +31,26 @@
 
     text-align: left;   
 }
+
+#btnContainer {
+    border: black 1px solid;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.addBtn {
+
+    display: inline-block;
+    justify-content: center;
+    margin: 15px auto 15px auto;
+    background-color: greenyellow;
+    justify-content: center;
+
+    padding: 10px;
+    border-radius: 15px;
+}
+
+
+
+

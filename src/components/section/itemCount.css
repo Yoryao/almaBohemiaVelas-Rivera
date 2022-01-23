@@ -1,0 +1,41 @@
+#itemCount {
+  display: flex;
+  width: 50%;
+  height: 35px;
+  border-radius: 5px;
+  background-color: blanchedalmond;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.addRemBtn {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 100%;
+  border: crimson 1px solid;
+}
+
+#add {
+    background-color: rgb(243, 22, 188) ;
+
+}
+
+#rem {
+    background-color: rgb(209, 38, 209) ;
+
+}
+
+#addBtn {
+    display: flex;
+    justify-content: center;
+    margin: 15px auto 15px auto;
+    background-color: greenyellow;
+    justify-content: center;
+
+    padding: 10px;
+    border-radius: 15px;
+}

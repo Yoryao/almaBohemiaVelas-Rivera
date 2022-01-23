@@ -62,43 +62,53 @@ addDoc(orderCollection, {nuevaOrden})
 
   return (
     <div id="mainCart">
+        <h1 id="title">Carrito</h1>
       {carrito.length > 0 ? (
-        <div  id="mainCart">
-          <h3>Listado de productos en carrito</h3>
+        <div  id="secondaryCart">
+          <h3 id="cartTitle">Listado de productos en carrito</h3>
+                <tr>
+                <th>Nombre:</th>
+                <th>Precio:</th>
+                <th>Cantidad:</th>
+              <th>Precio Parcial:</th>
+              </tr>
+
           {carrito.map((element) => {
             let parcialProducto = element.cantidad * element.precio;
             element.precioParcial = parcialProducto;
 
             return (
-<div id="cashierDiv">
+                  <div id="cashierDiv">
+                       <div id="tabla">
+                       <tr>
 
-              <div>
-                <span>Nombre: {element.nombre} </span>
-                <span>Precio: ${element.precio} </span>
-                <span>Cantidad: {element.cantidad} </span>
-                <span>Precio Parcial: ${parcialProducto} </span>
-                <button
-                  onClick={() => {
+                <td> {element.nombre} </td>
+                <td> ${element.precio} </td>
+                <td>  <button  class="addRemBtn" onClick={() => {
                     sumar(element.id);
                   }}
                 >
-                  sumar
-                </button>
-                <button
+                  +
+                </button> {element.cantidad}  <button class="addRemBtn"
                   onClick={() => {
                     restar(element.id);
                   }}
                 >
-                  restar
-                </button>
-                <button
+                  -
+                </button> </td>
+                <td>${parcialProducto} 
+               
+               
+                <button class="addRemBtn"
                   onClick={() => {
                     borrarDelCarrito(element.id);
                   }}
                 >
                   {" "}
-                  Eliminar
-                </button>
+                  X
+                </button></td>
+                </tr>
+
               </div>
 
 
@@ -113,7 +123,7 @@ addDoc(orderCollection, {nuevaOrden})
 
 
             );
-          })};
+          })}
           <span>Precio Total del carrito: ${valorCarrito}</span>
 
 <div id="buyForm">
