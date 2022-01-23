@@ -3,11 +3,11 @@ import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { Link } from "react-router-dom";
 import { MyHook } from "../../../src/context/CartContext";
 import { db } from "../../firebase";
-import "./cart.css"
+import "./cart.css";
+import { Form } from "./Form"
 
 function Cart() {
-
-let id;
+  let id;
 
   const {
     carrito,
@@ -18,8 +18,8 @@ let id;
     setValorCarrito,
     setCantidadItems,
     cantidadItems,
-    orden, 
-    setOrden
+    orden,
+    setOrden,
   } = MyHook();
 
   const totalCarrito = carrito
@@ -51,115 +51,90 @@ let id;
       total: totalCarrito,
     };
 
-const orderCollection = collection(db, "orders");
-addDoc(orderCollection, {nuevaOrden})
-    .then( 
-     async  (resultado)  =>  {
-        await setOrden(resultado.id);
-        clear();
-      })     
+    const orderCollection = collection(db, "orders");
+    addDoc(orderCollection, { nuevaOrden }).then(async (resultado) => {
+      await setOrden(resultado.id);
+      clear();
+    });
   };
 
   return (
     <div id="mainCart">
-        <h1 id="title">Carrito</h1>
+      <h1 id="title">Carrito</h1>
       {carrito.length > 0 ? (
-        <div  id="secondaryCart">
+        <div id="secondaryCart">
           <h3 id="cartTitle">Listado de productos en carrito</h3>
-                <tr>
-                <th>Nombre:</th>
-                <th>Precio:</th>
-                <th>Cantidad:</th>
-              <th>Precio Parcial:</th>
-              </tr>
+          <tr id="tableHead">
+            <th class="headCell">Nombre:</th>
+            <th class="headCell">Precio:</th>
+            <th class="headCell">Cantidad:</th>
+            <th class="headCell">Precio Parcial:</th>
+            <th class="headCell">Eliminar:</th>
+          </tr>
 
           {carrito.map((element) => {
             let parcialProducto = element.cantidad * element.precio;
             element.precioParcial = parcialProducto;
 
             return (
-                  <div id="cashierDiv">
-                       <div id="tabla">
-                       <tr>
-
-                <td> {element.nombre} </td>
-                <td> ${element.precio} </td>
-                <td>  <button  class="addRemBtn" onClick={() => {
-                    sumar(element.id);
-                  }}
-                >
-                  +
-                </button> {element.cantidad}  <button class="addRemBtn"
-                  onClick={() => {
-                    restar(element.id);
-                  }}
-                >
-                  -
-                </button> </td>
-                <td>${parcialProducto} 
-               
-               
-                <button class="addRemBtn"
-                  onClick={() => {
-                    borrarDelCarrito(element.id);
-                  }}
-                >
-                  {" "}
-                  X
-                </button></td>
-                </tr>
-
+              <div id="cashierDiv">
+                <div id="tabla">
+                  <tr>
+                    <td class="tableCell"> {element.nombre} </td>
+                    <td class="tableCell"> ${element.precio} </td>
+                    <td class="tableCell">
+                      {" "}
+                      <button
+                        class="addRemBtn"
+                        onClick={() => {
+                          sumar(element.id);
+                        }}
+                      >
+                        +
+                      </button>{" "}
+                      {element.cantidad}{" "}
+                      <button
+                        class="addRemBtn"
+                        onClick={() => {
+                          restar(element.id);
+                        }}
+                      >
+                        -
+                      </button>{" "}
+                    </td>
+                    <td class="tableCell">${parcialProducto}</td>
+                    <td class="tableCell">
+                      <button
+                        class="addRemBtn"
+                        onClick={() => {
+                          borrarDelCarrito(element.id);
+                        }}
+                      >
+                        {" "}
+                        X
+                      </button>
+                    </td>
+                  </tr>
+                </div>
               </div>
-
-
-
-</div>
-
-
-
-
-
-
-
-
             );
           })}
-          <span>Precio Total del carrito: ${valorCarrito}</span>
 
-<div id="buyForm">
-<input type="text" placeholder="Nombre"></input>
-<input type="telephone" placeholder="Telefono"></input>
-<input type="email" placeholder="Correo Electronico"></input>
+          <span id="finalPrice">Precio Total del carrito: ${valorCarrito}</span>
 
-<Link to={`/cashier`} props={id}>
-<button onClick={pay} variant="primary">Pagar</button> </Link>
+<Form></Form>
 
-<button onClick={clear} variant="primary">
-        Vaciar Carrito
-      </button>
-
-
-</div>
-
-
-
-
-
-        </div>
+            <button class="btnInCart" onClick={clear} variant="primary">
+              Vaciar Carrito
+            </button>
+          </div>
       ) : (
         <p>El carrito esta Vacio</p>
       )}
 
       <Link to={`/productos`}>
-        <button variant="primary">Seguir Comprando</button>
+        <button  class="btnInCart" variant="primary">Seguir Comprando</button>
       </Link>
-    
-
-       
-
-
-
-
     </div>
   );
 }
