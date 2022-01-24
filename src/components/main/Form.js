@@ -3,28 +3,31 @@ import { db } from "../../firebase";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { Link } from "react-router-dom";
 import { MyHook } from "../../../src/context/CartContext";
+import { useState } from "react";
 
 export const Form = () => {
     let id = 0;
 
+    const [telefono, setTelefono] = useState(0);
+    const [mail, setMail] = useState("");
+
     const {
         carrito,
-        setCarrito,
         clear,
-        borrarDelCarrito,
         valorCarrito,
-        setValorCarrito,
-        setCantidadItems,
-        cantidadItems,
-        orden,
         setOrden,
-      } = MyHook();
+        name, setName
+    } = MyHook();
 
-    const pay = () => {
-        const nuevaOrden = {
-          cliente: "John Doe",
-          telefono: 1122334455,
-          email: "email@email",
+    const registerName = ( e ) => {setName(e.target.value)}
+    const registerTelefono = ( e ) => {setTelefono(e.target.value)}
+    const registerMail = ( e ) => {setMail(e.target.value)}
+
+     const pay = () => {
+       const nuevaOrden = {
+          cliente: {name},
+          telefono: {telefono},
+          email: {mail},
           productos: carrito,
           fecha: serverTimestamp(),
           total: valorCarrito,
@@ -39,19 +42,15 @@ export const Form = () => {
     
   return (
     <div id="buyForm">
-      <input type="text" placeholder="Nombre"></input>
-      <input type="telephone" placeholder="Telefono"></input>
-      <input type="email" placeholder="Correo Electronico"></input>
+      <input onChange={registerName} id="name" type="text" placeholder="Nombre"></input>
+      <input onChange={registerTelefono} id="telefono" type="telephone" placeholder="Telefono"></input>
+      <input onChange={registerMail} id="email" type="email" placeholder="Correo Electronico"></input>
 
       <Link to={`/cashier`} props={id}>
         <button onClick={pay} variant="primary">
           Pagar
         </button>{" "}
       </Link>
-
-      <button onClick={clear} variant="primary">
-        Vaciar Carrito
-      </button>
     </div>
   );
 };

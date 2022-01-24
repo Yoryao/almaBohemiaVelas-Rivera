@@ -15,7 +15,7 @@ export const NavBar = ({ marca, links }) => {
         {links.map((link, index) => {
           return (
             <nav>
-              <NavLink key={index} className="link" to={link.href}>
+              <NavLink key={link.id} className="link" to={link.href}>
                 {link.nombre}
               </NavLink>
             </nav>

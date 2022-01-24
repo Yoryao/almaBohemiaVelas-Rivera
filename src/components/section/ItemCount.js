@@ -8,7 +8,7 @@ function ItemCount({ initial, onAdd }) {
   const [contador, setContador] = useState(initial);
   
   function sumar() { 
-    {setContador(contador + 1)}
+    setContador(contador + 1)
   }
 
   function restar() {
