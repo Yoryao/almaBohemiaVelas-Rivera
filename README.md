@@ -19,15 +19,17 @@
 
     El producto a elección fueron velas y esencias.
 
+    Actualmente, la App se encuentra en estado de pausa, posterior a la entrega y se actualizará con las correcciones del Profesor y/o Tutor.
+
 2. Recursos.
 
     Para el desarrollo se utilizó:
 
-    -   [HTML](https://www.example.com)
-    -   [CSS](https://www.example.com)
-    -   [JS](https://www.example.com)
-    -   [REACT](https://www.example.com)
-    -   [FIREBASE](https://www.example.com)
+    -   [HTML](https://developer.mozilla.org/es/docs/Glossary/HTML)
+    -   [CSS](https://developer.mozilla.org/es/docs/Web/CSS)
+    -   [JS](https://developer.mozilla.org/es/docs/Web/JavaScript)
+    -   [REACT](https://es.reactjs.org/)
+    -   [FIREBASE](https://firebase.google.com/)
     
     y las siguientes dependencias:
 
@@ -48,34 +50,71 @@
     El **Footer** incluye simplemente información de diseño y cumple fines esteticos.
 
 
-. Pruebas.
+4. Flujo.  
+Al ingresar en la app, el usuario podra optar por interactuar con el NavBar:
+    1. Brand: dirige al inicio y muestra la totalidad de los productos. 
+    2. Nosootros: breve texto introductorio sobre la empresa.
+    3. Productos: dirige al inicio y muestra la totalidad de los productos.
+    4. Velas: filtra los productos que responden a la categoria.
+    5. Escencia: filtra los productos que responden a la categoria.
+    6. Contacto: Exhibe los datos de contacto de la empresa.
+    7. CartWidget: Dirige al carrito de compras, donde se podra interactura con los productos elegidos. Si no se hubieran elegido productos, indicará que se encuentra vacio y ofrecerá continuar comprando. 
 
-4. Información Técnica.
+
+Una vez visualizado los productos, los mismos exhibiran nombre, precio e imagen, y un boton para acceder al detalle de los mismos. Desde aqui, solo se puede avanzar presionando el boton de
+
+
+
+
+
+
+
+
+
+ recibira los productos encontrados en la Base de Datos. 
+
+4. Información Técnica.  
 
 5. Futuras implemnentaciones.
+>
+>
+>
+>
 
 
 
 
-
+>
+>
 7. Base de Datos.
 
+Para la base de datos se utilizo la herramienta **Firebase** de la empresa Google. Por un lado se utilizo la coleccion **productos**, para alojar información sobre los elementos a la venta, los cuales tiene la siguiente estructura.
+
+```
+producto = {
+categoria: "(string)",  
+descripcion: "(string)",
+img: "(string)",
+nombre: "(string)",
+precio: (number)
+}
+```
+
+Por otro lado, se utilizo la colección **orders** para registrar información sobre el comprador y los productos adquiridos, con la siguiente estructura:
+
+```
+order = {
+cliente: "(string)",  
+email: "(string)",
+fecha: "(string)",
+productos: { object },
+telefono: (number),
+total: (number)
+}
+```
 
 
 
-
-
-
-
-
-# Element	Markdown Syntax
-Heading	
-# H1
-## H2
-### H3
-
-Bold	
-**bold text**
 
 Italic	
 *italicized text*
@@ -106,27 +145,7 @@ Table
 | Header | Title |
 | Paragraph | Text |
 
-Fenced Code Block	
-```
-{
-  "firstName": "John",
-  "lastName": "Smith",
-  "age": 25
-}
-```
-Footnote	
-Here's a sentence with a footnote. [^1]
 
-[^1]: This is the footnote.
-Heading ID	
-### My Great Heading {#custom-id}
-Definition List	term
-: definition
-Strikethrough	~~The world is flat.~~
-Task List	
-- [x] Write the press release
-- [ ] Update the website
-- [ ] Contact the media
 Emoji
 (see also Copying and Pasting Emoji)	
 That is so funny! :joy:
