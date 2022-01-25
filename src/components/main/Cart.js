@@ -108,11 +108,11 @@ function Cart() {
 
           </div>
       ) : (
-        <p>El carrito esta Vacio</p>
+        <p id="emptyCart">El carrito esta Vacio</p>
       )}
 
       <Link to={`/productos`}>
-        <button  className="btnInCart" variant="primary">Seguir Comprando</button>
+        <button id="emptyCartBtn"  className="btnInCart" variant="primary">Seguir Comprando</button>
       </Link>
     </div>
   );

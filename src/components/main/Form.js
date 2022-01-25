@@ -4,6 +4,7 @@ import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { Link } from "react-router-dom";
 import { MyHook } from "../../../src/context/CartContext";
 import { useState } from "react";
+import  "./form.css"
 
 export const Form = () => {
     let id = 0;
@@ -42,15 +43,19 @@ export const Form = () => {
     
   return (
     <div id="buyForm">
-      <input onChange={registerName} id="name" type="text" placeholder="Nombre"></input>
-      <input onChange={registerTelefono} id="telefono" type="telephone" placeholder="Telefono"></input>
-      <input onChange={registerMail} id="email" type="email" placeholder="Correo Electronico"></input>
 
+      <h4>Completa tus datos y presiona "pagar" para completar tu compra</h4>
+
+      <form>
+      <input onChange={registerName}  type="text" placeholder="Ingresa tu Nombre"  required></input>
+      <input onChange={registerTelefono}  type="number" placeholder="Ingresa tu Telefono" required></input>
+      <input onChange={registerMail} type="email" placeholder="Ingresa tu E-mail" required></input>
       <Link to={`/cashier`} props={id}>
-        <button onClick={pay} variant="primary">
+        <button onClick={pay} id="payBtn">
           Pagar
         </button>{" "}
       </Link>
+          </form>
     </div>
   );
 };

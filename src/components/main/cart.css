@@ -67,7 +67,14 @@
 
 .btnInCart {
     width: 25%;
+    margin: 15px 15px;
     align-content: center;
     padding: 5px 10px 5px 10px;
 
+}
+
+#emptyCart {
+  text-align: center;
+  color: blueviolet;
+  font-size: x-large;
 }
