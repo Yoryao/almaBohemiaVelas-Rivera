@@ -13,7 +13,7 @@
 
 ## Contenido
 
-1. Introducción.
+1. Introducción.  
 
     Como proyecto final del Curso de React se desarrollaró la app de un e-commerce para poder vender productos de un rubro a elección.
 
@@ -21,9 +21,9 @@
 
     Actualmente, la App se encuentra en estado de pausa, posterior a la entrega y se actualizará con las correcciones del Profesor y/o Tutor.
 
-2. Recursos.
-
-    Para el desarrollo se utilizó:
+2. Recursos.  
+ 
+    Para el desarrollo de la aplicación se utilizó las siguientes tecnologías:
 
     -   [HTML](https://developer.mozilla.org/es/docs/Glossary/HTML)
     -   [CSS](https://developer.mozilla.org/es/docs/Web/CSS)
@@ -38,7 +38,8 @@
     - react-router-dom
     - react-scripts  
 
-1. Descripcion.
+3. Descripcion.  
+
     La app se divide en 3 partes principales: _Navbar, Main y Footer._
 
     El **Navbar** incluye el Brand principal, links hacia las secciones: _Nosotros, Productos, Categoria1, Categoria2 y Contacto_ y el CartWidget que direcciona al carrito y enumera la cantidad de Items en el mismo.
@@ -49,9 +50,9 @@
 
     El **Footer** incluye simplemente información de diseño y cumple fines esteticos.
 
-
 4. Flujo.  
-Al ingresar en la app, el usuario podra optar por interactuar con el NavBar:
+    
+    Al ingresar en la app, el usuario podra optar por interactuar con el NavBar:
     1. Brand: dirige al inicio y muestra la totalidad de los productos. 
     2. Nosootros: breve texto introductorio sobre la empresa.
     3. Productos: dirige al inicio y muestra la totalidad de los productos.
@@ -61,7 +62,19 @@ Al ingresar en la app, el usuario podra optar por interactuar con el NavBar:
     7. CartWidget: Dirige al carrito de compras, donde se podra interactura con los productos elegidos. Si no se hubieran elegido productos, indicará que se encuentra vacio y ofrecerá continuar comprando. 
 
 
-Una vez visualizado los productos, los mismos exhibiran nombre, precio e imagen, y un boton para acceder al detalle de los mismos. Desde aqui, solo se puede avanzar presionando el boton de
+    En caso de no interactuar con el NavBar, una vez se hayan renderizado los productos, los mismos exhibiran nombre, precio e imagen, y un boton para acceder al detalle de los mismos. Desde esta instancia, solo se puede avanzar presionando el boton de _Ver Detalle_, el cual nos llevara a la pagina _Detalle de Producto_. Aqui veremos la imagen, el nombre, descripción y precio. Tambien podremos elegir la cantidad de productos que deseamos y agregarlos al carrito. 
+
+    Luego de agregar los items al carrito, aparecerá un mensaje de confirmación con la cantidad agregada y 2 botones que ofrecen opciones al usuario:
+        1. **Seguir Comprando**, el cual nos llevará nuevamente al listado de productos. 
+        2. **Terminar Compra**, el cual nos llevará al carrito, para poder revisar las cantidades y modificar las misma. 
+
+    El carrito tiene las siguientes funcionalidades:
+    - Vaciar Carrito.
+    - Incrementar - Decrementar cantidad.
+    - Eliminar Producto.
+    - Seguir comprando, para volver al listado de productos. 
+
+
 
 
 
@@ -76,11 +89,12 @@ Una vez visualizado los productos, los mismos exhibiran nombre, precio e imagen,
 4. Información Técnica.  
 
 5. Futuras implemnentaciones.
->
->
->
->
 
+6. Autor
+
+7. componentes
+
+8. Utilización del proyecto.
 
 
 
@@ -114,21 +128,12 @@ total: (number)
 ```
 
 
-
-
 Italic	
 *italicized text*
 
 Blockquote
 > blockquote
-Ordered List	
-1. First item
-2. Second item
-3. Third item
-Unordered List	
-- First item
-- Second item
-- Third item
+
 Code
 	`code`
 Horizontal Rule	
