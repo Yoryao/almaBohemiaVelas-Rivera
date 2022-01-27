@@ -71,35 +71,45 @@
     El carrito tiene las siguientes funcionalidades:
     - Vaciar Carrito.
     - Incrementar - Decrementar cantidad.
-    - Eliminar Producto.
+    - Eliminar Producto. Cuando se eliminan todos los productos, se produce el mismo rederizado que al vaciar carrito.
     - Seguir comprando, para volver al listado de productos. 
 
+    Una vez que se tienen en el carrito todos los productos, para simular el pago del mismo se solicita al usuario que ingrese nombre, mail y telefono, y luego se autoriza la ejecución del boton **Pagar**.
+
+    Luego de ejecutar el pago, se agradece al cliente la compra y se otorga un numero de ID generado automaticamente por _Firebase_ y vinculado con los datos de los productos y la información del cliente. Desde esta pagina se puede regresar al listado de productos. 
+
+7. Componentes
+
+    El header cuenta con los siguientes componentes:
+    - NavLink. 
+    - Navbar. (Con varios Navlink en su interior)
+    - CartWidget. (Alojado en otro NavLink)
+
+    El main, por su parte, incluye los siguientes componentes:
+    -   Nosotros, con información de la empresa
+    -   ItemListContainer, que contiene la logica de obteción de datos de los productos. 
+    -   ItemList, que prepara la información para ser visualizada por el siguiente componente.
+    -   Item, que visualiza la información. 
+    -   ItemDetailContainer que obtiene la información de 1 producto para mostrar el detalle del mismo. 
+    -   ItemDetail, que visualiza la información de ese producto. 
+    -   ItemCount, que determina la cantidad de tal producto que se agregará al carrito.
+    -   Cart, que visualiza la información de los productos en el carrito. 
+    -   Cashier, que muestra la información una vez realizada la compra.
+    -   Contact, con información de la contacto de la empresa.
+
+    El footer es un componente en si mismo. 
+
+    Y por ultimo el componente CartContext, que es el encargado de 
 
 
-
-
-
-
-
-
-
-
- recibira los productos encontrados en la Base de Datos. 
 
 4. Información Técnica.  
 
-5. Futuras implemnentaciones.
-
 6. Autor
 
-7. componentes
 
 8. Utilización del proyecto.
 
-
-
->
->
 7. Base de Datos.
 
 Para la base de datos se utilizo la herramienta **Firebase** de la empresa Google. Por un lado se utilizo la coleccion **productos**, para alojar información sobre los elementos a la venta, los cuales tiene la siguiente estructura.
@@ -128,9 +138,6 @@ total: (number)
 ```
 
 
-Italic	
-*italicized text*
-
 Blockquote
 > blockquote
 
@@ -141,22 +148,3 @@ Horizontal Rule
 Link	[title](https://www.example.com)
 Image	![alt text](image.jpg)
 Extended Syntax
-These elements extend the basic syntax by adding additional features. Not all Markdown applications support these elements.
-
-Element	Markdown Syntax
-Table	
-| Syntax | Description |
-| ----------- | ----------- |
-| Header | Title |
-| Paragraph | Text |
-
-
-Emoji
-(see also Copying and Pasting Emoji)	
-That is so funny! :joy:
-Highlight	
-I need to highlight these ==very important words==.
-Subscript
-	H~2~O
-Superscript	
-X^2^
