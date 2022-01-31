@@ -66,14 +66,18 @@
 }
 
 .btnInCart {
+  display: flex;
     width: 25%;
-    margin: 15px 15px;
-    align-content: center;
+    margin: 15px auto 15px auto;
     padding: 5px 10px 5px 10px;
-
+    justify-content: center;
+    font-style: normal;
+    text-decoration: none;
+    font-size: medium;
+    background-color: greenyellow;
 }
 
-#emptyCart {
+#emptyCartAdvise {
   text-align: center;
   color: blueviolet;
   font-size: x-large;

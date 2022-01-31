@@ -20,7 +20,7 @@ header {
   color: #6772d4;
 }
 
-#marca {
+#brand {
   font-size: xx-large;
   color: #6772d4;
   text-decoration: none;
@@ -55,20 +55,4 @@ header {
   padding-left: 5px;
   margin-right: 25px;
   text-decoration: none;
-}
-
-.color1 {
-  color: #d4676d;
-}
-.color2 {
-  color: #d18f57;
-}
-.color3 {
-  color: #d4c069;
-}
-.color4 {
-  color: #dfdf98;
-}
-.color5 {
-  color: #ebeacb;
 }

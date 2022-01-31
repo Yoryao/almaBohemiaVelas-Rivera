@@ -12,18 +12,12 @@ export const MyHook = () => {
 const MyProvider = ({ children }) => {
 
   const [name, setName] = useState("");
-
   const [orden, setOrden] = useState("")
-  //cantidad de productos
   const [cantidad, setCantidad] = useState(0);
-  //cantidad de items
   const [cantidadItems, setCantidadItems] = useState(0);
-
   const [valorCarrito, setValorCarrito] = useState(0);
-
   const [carrito, setCarrito] = useState([]);
 
-  //fx para agregar producto y cantidad al carrito
   const agregarAlCarrito = (producto, cantidad, id) => {
     if (isInCarrito(id)) {
 
@@ -60,14 +54,13 @@ const cantidadBorrada = carrito.find((item) => item.id === id)
     setCantidadItems(cantidadItems - cantidadBorrada.cantidad);
   };
 
-  //borrar todo el carrito
   const clear = () => {
     setCarrito([]);
     setValorCarrito(0);
     setCantidadItems(0);
+    setName("");
   };
 
-  //   //verificacion si el producto esta en el carrito
   const isInCarrito = (id) => {
     const isInCarrito = carrito.find((item) => item.id === id);
     return isInCarrito ? true : false;

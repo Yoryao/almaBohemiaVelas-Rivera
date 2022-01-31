@@ -1,6 +1,10 @@
+#emptyCart {
+  padding-right: 10px;
+}
+
 #emptyCart:hover {
-    padding-left: 5px;
-    padding-right: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
   border-radius: 5px;
   display: inline-block;
   height: 100%;
@@ -8,13 +12,17 @@
 }
 
 #cartButton {
-    background-color: chartreuse;
-    border-radius: 5px;
-    width: 60px;
-    height: 35px;
-
+  background-color: chartreuse;
+  border-radius: 5px;
+  width: 60px;
+  height: 35px;
 }
 
 #itemQuantity {
-    font-size: medium;
+  font-size: medium;
+}
+
+#cartButton:hover {
+  background-color: pink;
+  border: darkviolet;
 }

@@ -14,7 +14,7 @@ export const ItemListContainer = ({ saludo }) => {
        const productosQuery = collection(db, "productos");
 
        if (categoria) {   
-         const consulta = query(
+                  const consulta = query(
            productosQuery,
            where("categoria", "==", categoria)
          );

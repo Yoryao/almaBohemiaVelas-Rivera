@@ -20,7 +20,7 @@ function Cart() {
   const totalCarrito = carrito
     .map((item) => item.precioParcial)
     .reduce((prev, curr) => prev + curr, 0);
-  setValorCarrito(totalCarrito);
+    setValorCarrito(totalCarrito);
 
   const sumar = (id) => {
     let cantidadModificada = carrito.find((item) => item.id === id);
@@ -65,19 +65,19 @@ function Cart() {
                       <button
                         className="addRemBtn"
                         onClick={() => {
-                          sumar(element.id);
+                          restar(element.id);
                         }}
                       >
-                        +
+                        -
                       </button>{" "}
                       {element.cantidad}{" "}
                       <button
                         className="addRemBtn"
                         onClick={() => {
-                          restar(element.id);
+                          sumar(element.id);
                         }}
                       >
-                        -
+                        +
                       </button>{" "}
                     </td>
                     <td className="tableCell">${parcialProducto}</td>
@@ -112,7 +112,7 @@ function Cart() {
       )}
 
       <Link to={`/productos`}>
-        <button id="emptyCartBtn"  className="btnInCart" variant="primary">Seguir Comprando</button>
+        <button id="emptyCartBtn"  className="btnInCart" >Seguir Comprando</button>
       </Link>
     </div>
   );

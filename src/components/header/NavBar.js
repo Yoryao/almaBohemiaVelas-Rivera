@@ -6,13 +6,12 @@ import "./navBar.css"
 export const NavBar = ({ marca, links }) => {
   return (
     <header>
-      
-      <NavLink id="marca" to="/">
+      <NavLink id="brand" to="/">
         {marca}
       </NavLink>
 
       <div id="navbarLinksBar" >
-        {links.map((link, index) => {
+        {links.map((link) => {
           return (
             <nav>
               <NavLink key={link.id} className="link" to={link.href}>

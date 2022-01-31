@@ -30,6 +30,13 @@ const ItemDetail = (  { producto } ) => {
           <div>
             <ItemCount initial={inicial} onAdd={onAdd} />
           </div>
+
+          <Link to={`/productos`}>
+        <button id="keepShopBtn"  className="btnInCart" >Seguir Comprando</button>
+      </Link>
+
+
+
       </div>
     );
   } else {
