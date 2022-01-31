@@ -6,9 +6,10 @@ import "./cashier.css";
 const Cashier = () => {
   const clearOrder = () => {
     setOrden("");
+    setName("");
   };
 
-  const { orden, setOrden, name } = MyHook();
+  const { orden, setOrden, name, setName } = MyHook();
 
   return (
     <div id="divCashier">

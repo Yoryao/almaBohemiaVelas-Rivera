@@ -78,7 +78,7 @@
 
     Luego de ejecutar el pago, se agradece al cliente la compra y se otorga un numero de ID generado automaticamente por _Firebase_ y vinculado con los datos de los productos y la información del cliente. Desde esta pagina se puede regresar al listado de productos. 
 
-7. Componentes
+5. Componentes
 
     El header cuenta con los siguientes componentes:
     - NavLink. 
@@ -99,16 +99,15 @@
 
     El footer es un componente en si mismo. 
 
-    Y por ultimo el componente CartContext, que es el encargado de 
+    Y por ultimo el componente CartContext, que es el encargado de inicializar la mayoria de los estados y de la creacción del _Provider_.
 
-
-
-4. Información Técnica.  
-
-6. Autor
-
-
-8. Utilización del proyecto.
+6. Implementaciones Pendientes
+  
+    1. Validación de datos en formulario.
+    2. Login inicial con datos de cuenta.
+    3. Responsive Design.
+    4. Carrito persistente con la sesion => SessionStorage.
+    5. Ajuste de diseño en CSS.
 
 7. Base de Datos.
 
@@ -137,14 +136,4 @@ total: (number)
 }
 ```
 
-
-Blockquote
-> blockquote
-
-Code
-	`code`
-Horizontal Rule	
----
-Link	[title](https://www.example.com)
-Image	![alt text](image.jpg)
-Extended Syntax
+8. Autor

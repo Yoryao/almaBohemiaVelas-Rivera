@@ -58,8 +58,7 @@ const cantidadBorrada = carrito.find((item) => item.id === id)
     setCarrito([]);
     setValorCarrito(0);
     setCantidadItems(0);
-    setName("");
-  };
+   };
 
   const isInCarrito = (id) => {
     const isInCarrito = carrito.find((item) => item.id === id);
