@@ -1,8 +1,0 @@
-[
-    { "id": 1, "nombre": "Difusor", "descripcion": "Para aromatizar ambientes", "categoria":"perfumes", "precio": 10000 , "img":"/difusor.jpg", "stock": 10, "initial":5 },
-    { "id": 2, "nombre": "Bochin",  "descripcion": "Pequeña vela de sitio", "categoria":"velas", "precio": 1000, "img":"/bochin.jpg", "stock": 8, "initial":4  },
-    { "id": 3, "nombre": "Velon",   "descripcion": "Velon de Sition", "categoria":"velas", "precio": 100, "img":"./velon.jpg", "stock": 6, "initial":3  },
-    { "id": 4, "nombre": "Esencia", "descripcion": "Para utilizar con hornitos", "categoria":"perfumes", "precio": 10, "img":"/esencia.jpg", "stock": 4, "initial":2  },
-    { "id": 5, "nombre": "Recarga", "descripcion": "Recarga de tus recipientes", "categoria":"velas", "precio": 1, "img":"/recarga.jpg", "stock": 2, "initial":1  }
-
-  ]

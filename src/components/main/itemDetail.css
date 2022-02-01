@@ -1,0 +1,57 @@
+.cardDetail {
+  width: 50%;
+  border-radius: 10px;
+  border: silver 1px solid;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.imgDetail {
+  display: flex;
+  width: 200px;
+  height: 200px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.infoDetail {
+  display: block;
+  width: 80%;
+  background-color: blanchedalmond;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  margin: 15px auto 15px auto;
+  padding: 15px;
+  text-align: center;
+}
+
+#btnContainer {
+  border: black 1px solid;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.addBtn {
+  display: inline-block;
+  justify-content: center;
+  margin: 15px auto 15px auto;
+  background-color: greenyellow;
+  justify-content: center;
+
+  padding: 10px;
+  border-radius: 15px;
+}
+
+#keepShopBtn {
+  display: flex;
+  justify-content: center;
+  margin: 15px auto 15px auto;
+  background-color: greenyellow;
+  justify-content: center;
+
+  padding: 10px;
+  border-radius: 15px;
+}
