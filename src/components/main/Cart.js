@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { MyHook } from "../../../src/context/CartContext";
 import "./cart.css";
-import { Formulario } from "./Form"
+import { Formulario } from "./Formulario"
 
 function Cart() {
  
