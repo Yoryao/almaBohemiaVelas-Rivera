@@ -1,77 +1,171 @@
 import React from "react";
-import { db } from "../../firebase";
-import { collection, addDoc, serverTimestamp } from "firebase/firestore";
-import { Link } from "react-router-dom";
-import { MyHook } from "../../../src/context/CartContext";
-import { useState } from "react";
 import "./form.css";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import { MyHook } from "../../context/CartContext";
+import { db } from "../../firebase"
+import { collection, serverTimestamp, addDoc } from "firebase/firestore";
 
-export const Form = () => {
-  let valid = false;
-  
-  
-  
-  const [telefono, setTelefono] = useState(0);
-  const [mail, setMail] = useState("");
-  const [mail2, setMail2] = useState("");
-  
-  const { carrito, clear, valorCarrito, setOrden, name, setName } = MyHook();
-  
-  const registerName = (e) => {
-    setName(e.target.value);
-  };
-  const registerTelefono = (e) => {
-    setTelefono(e.target.value);
-  };
-  const registerMail = (e) => {
-    setMail(e.target.value);
-  };
+export const Formulario = () => {
 
-  
-  const registerMail2 = (e) => {
-    setMail2(e.target.value);
-  };
-  
-  const pay = () => {
-    
-    const nuevaOrden = {
-      cliente: { name },
-      telefono: { telefono },
-      email: { mail },
-      productos: carrito,
-      fecha: serverTimestamp(),
-      total: valorCarrito,
-    };
-    
-    const orderCollection = collection(db, "orders");
-    addDoc(orderCollection, { nuevaOrden }).then(async (resultado) => {
-      await setOrden(resultado.id);
-      clear();
-    });    
-  };
-  
-    if (name != "" 
-    && telefono != "" 
-    && mail  != "" 
-    && mail === mail2) {
-      valid = true;
-    }
-  
+  const { carrito, valorCarrito, setOrden, clear } = MyHook();
+
+
+
   return (
-    <div id="buyForm">
-      <h4>Completa tus datos y presiona "pagar" para completar tu compra.</h4>
-      <h4>Recuerda completar todos tus datos y que los mails sean iguales.</h4>
+    <>
+      <Formik
+        initialValues={{
+          nombre: "",
+          correo: "",
+          correo2: "",
+          telefono: "",
+        }}
+        onSubmit={(valores) => {
 
-      <form >
-        <input onChange={registerName} type="text" placeholder="Ingresa tu Nombre" required ></input>
-        <input onChange={registerTelefono} type="number" placeholder="Ingresa tu Telefono" required></input>
-        <input onChange={registerMail} type="email" placeholder="Ingresa tu E-mail" required></input>
-        <input onChange={registerMail2} type="email" placeholder="Reingresa tu E-mail" required></input>
+          const nuevaOrden = {
+            cliente:  (valores.nombre) ,
+            telefono: (valores.telefono),
+            email: (valores.correo),
+            productos: carrito,
+            fecha: serverTimestamp(),
+            total: valorCarrito,
+          };
+      
+          const orderCollection = collection(db, "orders");
+          addDoc(orderCollection, { nuevaOrden }).then(async (resultado) => {
+            await setOrden(resultado.id);
+           
+           
+           
+           
+           
+           
+           
+           
+           
+            clear();
+          
+          
+          
+          
+          
+          });
+      
 
-      </form>    
 
-{ valid ? <button onClick={pay} id="payBtn"> <Link to={`/cashier`}>Pagar</Link></button> : "" }
-       
-    </div>
+
+
+
+
+
+
+        }}
+        validate={(valores) => {
+          let errores = {};
+
+          if (!valores.nombre) {
+            errores.nombre = "Debes ingresar tu nombre";
+          } else if (!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(valores.nombre)) {
+            errores.nombre = "El nombre solo puede contener letras y espacios";
+          }
+
+          if (!valores.correo) {
+            errores.correo = "Debes ingresar tu correo";
+          } else if (
+            !/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(
+              valores.correo
+            )
+          ) {
+            errores.correo = "El correo no tiene el formato correcto.";
+          }
+
+          if (!valores.correo2) {
+            errores.correo2 = "Debes ingresar tu correo";
+          } else if (
+            !/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(
+              valores.correo
+            )
+          ) {
+            errores.correo2 = "El correo no tiene el formato correcto.";
+          } else if (valores.correo != valores.correo2) {
+            errores.correo2 = "El correo no coincide con el anterior";
+          }
+
+          if (!valores.telefono) {
+            errores.telefono = "Debes ingresar tu Telefono";
+          } else if (!/^[0-9]{1,40}$/.test(valores.telefono)) {
+            errores.telefono = "Solo debes ingresar numeros.";
+          }
+
+          return errores;
+        }}
+      >
+        {({ errors }) => (
+          <Form className="formulario">
+            {console.log(errors)}
+            <div>
+              <label htmlFor="nombre">Nombre</label>
+              <Field
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="Ingresa tu nombre"
+              />
+              <ErrorMessage
+                name="nombre"
+                component={() => <div>{errors.nombre}</div>}
+              />
+            </div>
+
+            <div>
+              <label htmlFor="telefono">Telefono</label>
+              <Field
+                type="text"
+                id="telefono"
+                name="telefono"
+                placeholder="Ingresa tu telefono"
+              />
+              <ErrorMessage
+                name="telefono"
+                component={() => <div>{errors.telefono}</div>}
+              />
+            </div>
+
+            <div>
+              <label htmlFor="correo">Correo</label>
+              <Field
+                type="text"
+                id="correo"
+                name="correo"
+                placeholder="Ingresa tu correo"
+              />
+              <ErrorMessage
+                name="correo"
+                component={() => <div>{errors.correo}</div>}
+              />
+            </div>
+
+            <div>
+              <label htmlFor="correo2">Correo</label>
+              <Field
+                type="text"
+                id="correo2"
+                name="correo2"
+                placeholder="Reingresa tu correo"
+              />
+              <ErrorMessage
+                name="correo2"
+                component={() => <div>{errors.correo2}</div>}
+              />
+            </div>
+
+            <button type="submit">Pagar</button>
+          </Form>
+        )}
+      </Formik>
+    </>
   );
 };
+
+export default Formulario;
+

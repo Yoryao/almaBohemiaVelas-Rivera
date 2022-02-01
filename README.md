@@ -137,3 +137,6 @@ total: (number)
 ```
 
 8. Autor
+
+Jorge Rivera
+jorgejoaquinrivera@gmail.com

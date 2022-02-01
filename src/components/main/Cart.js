@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { MyHook } from "../../../src/context/CartContext";
 import "./cart.css";
-import { Form } from "./Form"
+import { Formulario } from "./Form"
 
 function Cart() {
  
@@ -104,7 +104,7 @@ function Cart() {
               Vaciar Carrito
             </button>
 
-<Form></Form>
+<Formulario></Formulario>
 
           </div>
       ) : (
