@@ -32,8 +32,8 @@ function Cart() {
     let cantidadModificada = carrito.find((item) => item.id === id);
     if (cantidadModificada.cantidad > 0) {
       cantidadModificada.cantidad--;
-    }
-    setCantidadItems(cantidadItems - 1);
+    
+    setCantidadItems(cantidadItems - 1);}
   };
 
    return (
