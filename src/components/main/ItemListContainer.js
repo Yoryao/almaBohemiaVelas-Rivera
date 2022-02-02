@@ -37,7 +37,7 @@ export const ItemListContainer = ({ saludo }) => {
 
   return (
     <div id="divSaludo">
-      <h1 id="title">{saludo}</h1>
+      <h1 id="title">{saludo}{categoria}</h1>
       <ItemList productos={productos} />
     </div>
   );

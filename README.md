@@ -37,6 +37,7 @@
     - react-dom  
     - react-router-dom
     - react-scripts  
+    - Formik - Se utilizo para la validación del formulario.
 
 3. Descripcion.  
 
@@ -103,7 +104,6 @@
 
 6. Implementaciones Pendientes
   
-    1. Validación de datos en formulario.
     2. Login inicial con datos de cuenta.
     3. Responsive Design.
     4. Carrito persistente con la sesion => SessionStorage.

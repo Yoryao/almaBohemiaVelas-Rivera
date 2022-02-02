@@ -21,7 +21,7 @@ function App() {
             <Route path="/" element={<ItemListContainer saludo={"Bienvenidos"} />}/>
             <Route path="/nosotros" element={<Nosotros />}/>
             <Route path="/productos" element={<ItemListContainer saludo={"Productos"} />}/>
-            <Route path="/productos/:categoria" element={<ItemListContainer saludo={"Producto por categoria"} />}/>
+            <Route path="/productos/:categoria" element={<ItemListContainer saludo={"Producto por categoria: "} />}/>
             <Route path="/item/:id" element={<ItemDetailContainer saludo={"Detalle del Producto"} />}/>
             <Route path="/contacto" element={<Contact />} />
             <Route path="/cart" element={<Cart />} />

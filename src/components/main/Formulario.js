@@ -134,7 +134,7 @@ export const Formulario = () => {
               />
             </div>
 
-            <button type="submit">Pagar</button>
+            <button type="submit">Realizar Compra</button>
           </Form>
         )}
       </Formik>

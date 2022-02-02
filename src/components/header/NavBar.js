@@ -1,7 +1,8 @@
 import CartWidget from "./CartWidget";
 import { NavLink } from "react-router-dom";
-import "./navBar.css"
-
+import "./navBar.css";
+import MenuDropdown from "./Dropdown";
+import categorias from "../../categorias.json"
 
 export const NavBar = ({ marca, links }) => {
   return (
@@ -10,7 +11,9 @@ export const NavBar = ({ marca, links }) => {
         {marca}
       </NavLink>
 
-      <div id="navbarLinksBar" >
+
+      <div id="navbarLinksBar">
+       
         {links.map((link) => {
           return (
             <nav>
@@ -22,10 +25,11 @@ export const NavBar = ({ marca, links }) => {
         })}
       </div>
 
+      <MenuDropdown categorias={categorias}></MenuDropdown>
+
       <NavLink id="cartWidget" to={"/cart"}>
         <CartWidget />
       </NavLink>
-
     </header>
   );
 };
