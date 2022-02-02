@@ -20,7 +20,6 @@ export const ItemDetailContainer = ({ saludo }) => {
           setProducto({ id: id, ...resultado.data() });
          })
         .catch((error) => {
-          console.log(error);
         });
     }, [id] );
 

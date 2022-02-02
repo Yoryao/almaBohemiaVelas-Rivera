@@ -105,6 +105,7 @@
 6. Implementaciones Pendientes
   
     2. Login inicial con datos de cuenta.
+    3. Wishlist para los productos.
     3. Responsive Design.
     4. Carrito persistente con la sesion => SessionStorage.
     5. Ajuste de diseño en CSS.
