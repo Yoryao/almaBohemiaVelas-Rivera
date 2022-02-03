@@ -1,7 +1,5 @@
 [
     { "id": "1", "nombre": "Nosotros", "href": "/nosotros" },
     { "id": "2", "nombre": "Productos", "href": "/productos" },
-    { "id": "3", "nombre": "Perfumes", "href": "/productos/perfumes" },
-    { "id": "4", "nombre": "Velas", "href": "/productos/velas" },
     { "id": "5", "nombre": "Contacto", "href": "/contacto" }
 ]

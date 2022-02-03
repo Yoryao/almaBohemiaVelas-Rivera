@@ -1,6 +1,6 @@
 import CartWidget from "./CartWidget";
 import { NavLink } from "react-router-dom";
-import "./navBar.css";
+import "./NavBar.css";
 import MenuDropdown from "./Dropdown";
 import categorias from "../../categorias.json"
 
