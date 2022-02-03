@@ -1,8 +1,8 @@
-#emptyCart {
+#carritoVacio {
   padding-right: 10px;
 }
 
-#emptyCart:hover {
+#carritoVacio:hover {
   padding-left: 5px;
   padding-right: 5px;
   border-radius: 5px;
@@ -11,18 +11,18 @@
   background-color: #e73b1d6b;
 }
 
-#cartButton {
+#carritoBtn {
   background-color: chartreuse;
   border-radius: 5px;
   width: 60px;
   height: 35px;
 }
 
-#itemQuantity {
+#carritoCantidad {
   font-size: medium;
 }
 
-#cartButton:hover {
+#carritoBtn:hover {
   background-color: pink;
   border: darkviolet;
 }

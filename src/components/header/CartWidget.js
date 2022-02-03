@@ -10,11 +10,11 @@ function CartWidget() {
     <>
     { cantidadItems !== 0 ? (
    
-        <button id="cartButton">
+        <button id="carritoBtn">
           <span className="material-icons">shopping_cart</span>
-          <span id="itemQuantity">{ cantidadItems }</span>
+          <span id="carritoCantidad">{ cantidadItems }</span>
         </button>
-    ) : <p id="emptyCart">Carrito Vacio</p> }
+    ) : <p id="carritoVacio">Carrito Vacio</p> }
     </>
   );
 }

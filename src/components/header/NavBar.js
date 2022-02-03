@@ -7,12 +7,12 @@ import categorias from "../../categorias.json"
 export const NavBar = ({ marca, links }) => {
   return (
     <header>
-      <NavLink id="brand" to="/">
+      <NavLink id="marca" to="/">
         {marca}
       </NavLink>
 
 
-      <div id="navbarLinksBar">
+      <div id="linksNavBar">
        
         {links.map((link) => {
           return (

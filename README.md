@@ -9,84 +9,85 @@
 | **Profesor** | Horacio G. E. |
 | **Tutor** | Emanuel A. |
 | **Alumno** | Jorge Rivera |
-| **Git-Hub** | ?????? |
+| **Git-Hub** |[Yoryao](https://github.com/Yoryao) |
+
+## Trailer
+
+***
+
+<div style="position: relative; padding-bottom: 42.96875%; height: 0;"><iframe src="https://www.loom.com/embed/26aeba46df234f9fbc59e3c39cc97f2f" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+***
 
 ## Contenido
 
-1. Introducción.  
+1. Introducción.
 
-    Como proyecto final del Curso de React se desarrollaró la app de un e-commerce para poder vender productos de un rubro a elección.
+Como proyecto final del Curso de React se desarrollaró la app de un e-commerce para poder vender productos de un rubro a elección. El producto a elección fueron velas y esencias.     Actualmente, la App se encuentra en estado de pausa, posterior a la entrega y se actualizará con las correcciones del Profesor y/o Tutor.
 
-    El producto a elección fueron velas y esencias.
+2. Recursos.
 
-    Actualmente, la App se encuentra en estado de pausa, posterior a la entrega y se actualizará con las correcciones del Profesor y/o Tutor.
-
-2. Recursos.  
- 
-    Para el desarrollo de la aplicación se utilizó las siguientes tecnologías:
-
+Para el desarrollo de la aplicación se utilizó las siguientes tecnologías:
     -   [HTML](https://developer.mozilla.org/es/docs/Glossary/HTML)
     -   [CSS](https://developer.mozilla.org/es/docs/Web/CSS)
     -   [JS](https://developer.mozilla.org/es/docs/Web/JavaScript)
     -   [REACT](https://es.reactjs.org/)
     -   [FIREBASE](https://firebase.google.com/)
-    
     y las siguientes dependencias:
-
     - firebase  
     - react-dom  
     - react-router-dom
     - react-scripts  
     - Formik - Se utilizo para la validación del formulario.
+    - Bootstrap - Se utilizo en el menu desplegable de categorias.
+   
 
-3. Descripcion.  
 
-    La app se divide en 3 partes principales: _Navbar, Main y Footer._
 
-    El **Navbar** incluye el Brand principal, links hacia las secciones: _Nosotros, Productos, Categoria1, Categoria2 y Contacto_ y el CartWidget que direcciona al carrito y enumera la cantidad de Items en el mismo.
+3. Descripcion.
 
-    El **Main** incluye por su parte, los componentes necesarios para el renderizado de los productos en su totalidad o en unidad (detalle), listado de productos por categoria, el Carrito, el Cajero, el Formulario de datos y las secciones Nosotros y Contacto. 
+La app se divide en 3 partes principales: _Navbar, Main y Footer._
+El **Navbar** incluye el Brand principal, links hacia las secciones: _Nosotros, Productos, Contacto y menu de categorias_ y el _CartWidget_ que direcciona al carrito y enumera la cantidad de Items en el mismo.
 
-    Tambien se incluyen los componentes ItemCount y Cart Context.
+El **Main** incluye por su parte, los componentes necesarios para el renderizado de los productos en su totalidad o en unidad (detalle), listado de productos por categoria, el Carrito, el Cajero, el Formulario de datos y las secciones Nosotros y Contacto. Tambien se incluyen los componentes ItemCount y Cart Context.
 
-    El **Footer** incluye simplemente información de diseño y cumple fines esteticos.
+El **Footer** incluye simplemente información de diseño y cumple fines esteticos.
 
 4. Flujo.  
     
     Al ingresar en la app, el usuario podra optar por interactuar con el NavBar:
     1. Brand: dirige al inicio y muestra la totalidad de los productos. 
-    2. Nosootros: breve texto introductorio sobre la empresa.
+    2. Nosotros: breve texto introductorio sobre la empresa.
     3. Productos: dirige al inicio y muestra la totalidad de los productos.
-    4. Velas: filtra los productos que responden a la categoria.
-    5. Escencia: filtra los productos que responden a la categoria.
-    6. Contacto: Exhibe los datos de contacto de la empresa.
-    7. CartWidget: Dirige al carrito de compras, donde se podra interactura con los productos elegidos. Si no se hubieran elegido productos, indicará que se encuentra vacio y ofrecerá continuar comprando. 
+    4. Contacto: Exhibe los datos de contacto de la empresa.
+    5. Menu de Categorias: que filtra los productos por categoria.
+    6. CartWidget: Dirige al carrito de compras, donde se podra interactura con los productos elegidos. Si no se hubieran elegido productos, indicará que se encuentra vacio y ofrecerá continuar comprando.
+   
+En caso de no interactuar con el NavBar, una vez se hayan renderizado los productos, los mismos exhibiran nombre, precio e imagen, y un boton para acceder al detalle de los mismos. Desde esta instancia, solo se puede avanzar presionando el boton de _Ver Detalle_, el cual nos llevara a la pagina _Detalle de Producto_. Aqui veremos la imagen, el nombre, descripción y precio. Tambien podremos elegir la cantidad de productos que deseamos y agregarlos al carrito.
 
+Luego de agregar los items al carrito, aparecerá un mensaje de confirmación con la cantidad agregada y 2 botones que ofrecen opciones al usuario:
 
-    En caso de no interactuar con el NavBar, una vez se hayan renderizado los productos, los mismos exhibiran nombre, precio e imagen, y un boton para acceder al detalle de los mismos. Desde esta instancia, solo se puede avanzar presionando el boton de _Ver Detalle_, el cual nos llevara a la pagina _Detalle de Producto_. Aqui veremos la imagen, el nombre, descripción y precio. Tambien podremos elegir la cantidad de productos que deseamos y agregarlos al carrito. 
+1. **Seguir Comprando**, el cual nos llevará nuevamente al listado de productos. 
+2. **Terminar Compra**, el cual nos llevará al carrito, para poder revisar las cantidades y modificar las misma. 
 
-    Luego de agregar los items al carrito, aparecerá un mensaje de confirmación con la cantidad agregada y 2 botones que ofrecen opciones al usuario:
-        1. **Seguir Comprando**, el cual nos llevará nuevamente al listado de productos. 
-        2. **Terminar Compra**, el cual nos llevará al carrito, para poder revisar las cantidades y modificar las misma. 
+El carrito tiene las siguientes funcionalidades:
 
-    El carrito tiene las siguientes funcionalidades:
-    - Vaciar Carrito.
-    - Incrementar - Decrementar cantidad.
-    - Eliminar Producto. Cuando se eliminan todos los productos, se produce el mismo rederizado que al vaciar carrito.
-    - Seguir comprando, para volver al listado de productos. 
+- _Vaciar Carrito_.
+- _Incrementar - Decrementar_ cantidad.
+- _Eliminar Producto_. Cuando se eliminan todos los productos, se produce el mismo rederizado que al vaciar carrito.
+- _Seguir comprando_, para volver al listado de productos. 
 
-    Una vez que se tienen en el carrito todos los productos, para simular el pago del mismo se solicita al usuario que ingrese nombre, mail y telefono, y luego se autoriza la ejecución del boton **Pagar**.
+Una vez que se tienen en el carrito todos los productos, para simular el pago del mismo se solicita al usuario que ingrese nombre, telefono y confirme su mail ingresandolo 2 veces. Luego se autoriza la ejecución del boton **Pagar**.
 
-    Luego de ejecutar el pago, se agradece al cliente la compra y se otorga un numero de ID generado automaticamente por _Firebase_ y vinculado con los datos de los productos y la información del cliente. Desde esta pagina se puede regresar al listado de productos. 
+Luego de ejecutar el pago, se agradece al cliente la compra y se otorga un numero de ID generado automaticamente por _Firebase_ y vinculado con los datos de los productos y la información del cliente. Desde esta pagina se puede regresar al listado de productos. 
+5. Componentes:
 
-5. Componentes
-
-    El header cuenta con los siguientes componentes:
+El header cuenta con los siguientes componentes:
     - NavLink. 
     - Navbar. (Con varios Navlink en su interior)
     - CartWidget. (Alojado en otro NavLink)
-
-    El main, por su parte, incluye los siguientes componentes:
+    
+El main, por su parte, incluye los siguientes componentes:
     -   Nosotros, con información de la empresa
     -   ItemListContainer, que contiene la logica de obteción de datos de los productos. 
     -   ItemList, que prepara la información para ser visualizada por el siguiente componente.
@@ -95,21 +96,22 @@
     -   ItemDetail, que visualiza la información de ese producto. 
     -   ItemCount, que determina la cantidad de tal producto que se agregará al carrito.
     -   Cart, que visualiza la información de los productos en el carrito. 
+    -   Formulario, que recibe y valida la información del comprador.
     -   Cashier, que muestra la información una vez realizada la compra.
     -   Contact, con información de la contacto de la empresa.
 
-    El footer es un componente en si mismo. 
+El footer es un componente en si mismo. 
 
-    Y por ultimo el componente CartContext, que es el encargado de inicializar la mayoria de los estados y de la creacción del _Provider_.
+Y por ultimo el componente CartContext, que es el encargado de inicializar la mayoria de los estados y de la creacción del _Provider_.
 
 6. Implementaciones Pendientes
   
-    2. Login inicial con datos de cuenta.
-    3. Wishlist para los productos.
+    1. Login inicial con datos de cuenta.
+    2. Wishlist para los productos.
     3. Responsive Design.
     4. Carrito persistente con la sesion => SessionStorage.
     5. Ajuste de diseño en CSS.
-
+    
 7. Base de Datos.
 
 Para la base de datos se utilizo la herramienta **Firebase** de la empresa Google. Por un lado se utilizo la coleccion **productos**, para alojar información sobre los elementos a la venta, los cuales tiene la siguiente estructura.
@@ -140,4 +142,6 @@ total: (number)
 8. Autor
 
 Jorge Rivera
-jorgejoaquinrivera@gmail.com
+Mailto:     jorgejoaquinrivera@gmail.com
+Linkedin:   [Jorge Rivera](https://es.reactjs.org/)
+Git-Hub:    [Yoryao](https://github.com/Yoryao) 

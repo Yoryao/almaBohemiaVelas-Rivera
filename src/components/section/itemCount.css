@@ -19,17 +19,17 @@
   border: crimson 1px solid;
 }
 
-#add {
+#agregar {
     background-color: rgb(243, 22, 188) ;
 
 }
 
-#rem {
+#reducir {
     background-color: rgb(209, 38, 209) ;
 
 }
 
-#addBtn {
+#agregarBtn {
     display: flex;
     justify-content: center;
     margin: 15px auto 15px auto;

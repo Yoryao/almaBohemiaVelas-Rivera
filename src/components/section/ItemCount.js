@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./itemCount.css";
 
 function ItemCount({ initial, onAdd }) {
-  //console.log(initial)
   const [contador, setContador] = useState(initial);
 
   function sumar() {
@@ -25,16 +24,16 @@ if (contador > 0) {
     <div>
       <p id="itemCount">
         Unidades:
-        <button class="addRemBtn" id="add" onClick={sumar}>
+        <button class="addRemBtn" id="agregar" onClick={sumar}>
           +
         </button>
         {contador}
-        <button class="addRemBtn" id="rem" onClick={restar}>
+        <button class="addRemBtn" id="reducir" onClick={restar}>
           -
         </button>
       </p>
 
-      <button id="addBtn" onClick={agregarItem}>
+      <button id="agregarBtn" onClick={agregarItem}>
         Agregar al Carrito
       </button>
     </div> 
@@ -44,11 +43,11 @@ if (contador > 0) {
   return (
   <p id="itemCount">
   Unidades:
-  <button class="addRemBtn" id="add" onClick={sumar}>
+  <button class="addRemBtn" id="agregar" onClick={sumar}>
     +
   </button>
   {contador}
-  <button class="addRemBtn" id="rem" onClick={restar}>
+  <button class="addRemBtn" id="reducir" onClick={restar}>
     -
   </button>
 </p>

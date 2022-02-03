@@ -1,7 +1,6 @@
 #mainCart {
   width: 75%;
   border-radius: 10px;
-  border: rgb(240, 40, 40) 1px solid;
   padding-top: 25px;
   margin-left: auto;
   margin-right: auto;
@@ -18,13 +17,13 @@
   margin-top: 15px;
   margin-left: 5%;
   margin-bottom: 15px;
+  padding: 15px;
 }
 
 #cartTitle {
   margin-top: 20px;
   margin-bottom: 15px;
   padding-top: 5px;
-  border: tomato 1px solid;
   text-align: center;
   text-decoration: underline;
 }
