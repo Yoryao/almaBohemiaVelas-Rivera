@@ -143,5 +143,5 @@ total: (number)
 
 Jorge Rivera
 Mailto:     jorgejoaquinrivera@gmail.com
-Linkedin:   [Jorge Rivera](https://es.reactjs.org/)
+Linkedin:   [Jorge Rivera](https://www.linkedin.com/in/jorge-rivera-desarrollador-web/)
 Git-Hub:    [Yoryao](https://github.com/Yoryao) 
