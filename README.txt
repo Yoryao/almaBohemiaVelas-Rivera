@@ -21,8 +21,6 @@
 
 [Video del Flujo](https://www.loom.com/embed/26aeba46df234f9fbc59e3c39cc97f2f)
 
-<div style="position: relative; padding-bottom: 42.96875%; height: 0;"><iframe src="https://www.loom.com/embed/26aeba46df234f9fbc59e3c39cc97f2f" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
-
 ***
 
 ## Contenido
@@ -149,5 +147,5 @@ total: (number)
 
 Jorge Rivera
 Mailto:     jorgejoaquinrivera@gmail.com
-Linkedin:   [Jorge Rivera](https://es.reactjs.org/)
+Linkedin:   [Jorge Rivera](https://www.linkedin.com/in/jorge-rivera-desarrollador-web/)
 Git-Hub:    [Yoryao](https://github.com/Yoryao) 
